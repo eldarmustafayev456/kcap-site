@@ -1,0 +1,917 @@
+{
+  "platform": {
+    "en": "Platform",
+    "ko": "플랫폼",
+    "ru": "Платформа"
+  },
+  "projects": {
+    "en": "Projects",
+    "ko": "프로젝트",
+    "ru": "Проекты"
+  },
+  "news": {
+    "en": "News",
+    "ko": "소식",
+    "ru": "Новости"
+  },
+  "contact": {
+    "en": "Contact",
+    "ko": "문의",
+    "ru": "Контакты"
+  },
+  "slogan1": {
+    "en": "New connections.",
+    "ko": "새로운 연결.",
+    "ru": "Новые связи."
+  },
+  "slogan2": {
+    "en": "Shared opportunities.",
+    "ko": "함께 만드는 기회.",
+    "ru": "Общие возможности."
+  },
+  "heroCopy": {
+    "en": "KCAP structures and supports projects in Central Asia for Korean companies — from exploring opportunities and cooperation terms to developing projects and agreements.",
+    "ko": "KCAP은 한국 기업을 위해 중앙아시아 프로젝트를 구조화하고 지원합니다. 기회와 협력 조건 검토부터 프로젝트 및 합의의 발전까지 함께합니다.",
+    "ru": "KCAP структурирует и сопровождает проекты в Центральной Азии для корейских компаний — от проработки возможностей и условий сотрудничества до развития проектов и договорённостей."
+  },
+  "explore": {
+    "en": "Explore projects",
+    "ko": "프로젝트 살펴보기",
+    "ru": "Смотреть проекты"
+  },
+  "talk": {
+    "en": "Talk to the team",
+    "ko": "팀과 상담하기",
+    "ru": "Связаться с командой"
+  },
+  "discover": {
+    "en": "Discover KCAP",
+    "ko": "KCAP 살펴보기",
+    "ru": "Знакомство с KCAP"
+  },
+  "cooperation": {
+    "en": "Cooperation",
+    "ko": "협력",
+    "ru": "Сотрудничество"
+  },
+  "perspectives": {
+    "en": "Perspectives",
+    "ko": "인사이트",
+    "ru": "Обзор"
+  },
+  "corridor1": {
+    "en": "One corridor,",
+    "ko": "하나의 연결,",
+    "ru": "Один маршрут,"
+  },
+  "corridor2": {
+    "en": "four local times.",
+    "ko": "네 도시의 비즈니스 시간.",
+    "ru": "четыре деловых ритма."
+  },
+  "seoul": {
+    "en": "Seoul",
+    "ko": "서울",
+    "ru": "Сеул"
+  },
+  "tashkent": {
+    "en": "Tashkent",
+    "ko": "타슈켄트",
+    "ru": "Ташкент"
+  },
+  "almaty": {
+    "en": "Almaty",
+    "ko": "알마티",
+    "ru": "Алматы"
+  },
+  "bishkek": {
+    "en": "Bishkek",
+    "ko": "비슈케크",
+    "ru": "Бишкек"
+  },
+  "process1": {
+    "en": "How a project",
+    "ko": "프로젝트가",
+    "ru": "Как развивается"
+  },
+  "process2": {
+    "en": "travels.",
+    "ko": "이어지는 과정.",
+    "ru": "проект."
+  },
+  "step1label": {
+    "en": "01 · Dialogue",
+    "ko": "01 · 대화",
+    "ru": "01 · Диалог"
+  },
+  "step2label": {
+    "en": "02 · Review",
+    "ko": "02 · 검토",
+    "ru": "02 · Рассмотрение"
+  },
+  "step3label": {
+    "en": "03 · Connection",
+    "ko": "03 · 연결",
+    "ru": "03 · Контакты"
+  },
+  "step4label": {
+    "en": "04 · Support",
+    "ko": "04 · 지원",
+    "ru": "04 · Сопровождение"
+  },
+  "identify": {
+    "en": "First contact",
+    "ko": "첫 연락",
+    "ru": "Первичный контакт"
+  },
+  "review": {
+    "en": "Project information",
+    "ko": "프로젝트 정보",
+    "ru": "Информация о проекте"
+  },
+  "connect": {
+    "en": "Dialogue",
+    "ko": "대화",
+    "ru": "Диалог сторон"
+  },
+  "develop": {
+    "en": "Ongoing support",
+    "ko": "지속적 지원",
+    "ru": "Сопровождение"
+  },
+  "identifyCopy": {
+    "en": "Clarify the company’s interest or the project’s needs.",
+    "ko": "기업의 관심 또는 프로젝트 수요를 확인합니다.",
+    "ru": "Уточнение интереса компании или потребности проекта."
+  },
+  "reviewCopy": {
+    "en": "Provide structured information and identify open questions.",
+    "ko": "구조화된 정보를 제공하고 확인할 사항을 정리합니다.",
+    "ru": "Предоставление структурированной информации и уточнение открытых вопросов."
+  },
+  "connectCopy": {
+    "en": "Organise interaction between the parties.",
+    "ko": "당사자 간 소통을 조직합니다.",
+    "ru": "Организация взаимодействия сторон."
+  },
+  "developCopy": {
+    "en": "Support the development of projects and agreements. Proposed wording.",
+    "ko": "프로젝트와 합의의 발전을 지원합니다. 제안 문구입니다.",
+    "ru": "Сопровождение развития проектов и договорённостей. Предложенная редакция."
+  },
+  "projectHeading": {
+    "en": "Projects &",
+    "ko": "프로젝트와",
+    "ru": "Проекты и"
+  },
+  "possibilities": {
+    "en": "possibilities.",
+    "ko": "가능성.",
+    "ru": "возможности."
+  },
+  "catalogue": {
+    "en": "Project catalogue",
+    "ko": "프로젝트 카탈로그",
+    "ru": "Каталог проектов"
+  },
+  "demoNote": {
+    "en": "Illustrative entries for the design review. They do not represent an approved KCAP project portfolio.",
+    "ko": "디자인 검토를 위한 예시입니다. 승인된 KCAP 프로젝트 목록이 아닙니다.",
+    "ru": "Демонстрационные записи для оценки дизайна. Они не являются утверждённым портфелем проектов KCAP."
+  },
+  "focus": {
+    "en": "Regional focus",
+    "ko": "지역 범위",
+    "ru": "География"
+  },
+  "centralAsia": {
+    "en": "Central Asia",
+    "ko": "중앙아시아",
+    "ru": "Центральная Азия"
+  },
+  "focusCopy": {
+    "en": "Opportunities are presented by country, sector and project stage.",
+    "ko": "국가, 산업 및 프로젝트 단계별로 기회를 소개합니다.",
+    "ru": "Возможности представлены по странам, отраслям и стадиям проектов."
+  },
+  "koreanSide": {
+    "en": "Korean companies",
+    "ko": "한국 기업",
+    "ru": "Корейские компании"
+  },
+  "capabilities": {
+    "en": "Technology & capabilities",
+    "ko": "기술과 역량",
+    "ru": "Технологии и компетенции"
+  },
+  "capabilitiesCopy": {
+    "en": "A space to discuss regional needs and relevant Korean expertise.",
+    "ko": "지역의 수요와 한국의 전문성을 논의하는 공간입니다.",
+    "ru": "Пространство для обсуждения региональных потребностей и корейских компетенций."
+  },
+  "dialogue": {
+    "en": "A starting point for dialogue",
+    "ko": "대화의 출발점",
+    "ru": "Начало делового диалога"
+  },
+  "dialogueCopy": {
+    "en": "Project sponsors, businesses and organisations can share their interests.",
+    "ko": "프로젝트 추진자, 기업 및 기관이 관심 분야를 공유할 수 있습니다.",
+    "ru": "Инициаторы проектов, компании и организации могут обозначить свой интерес."
+  },
+  "journal1": {
+    "en": "The platform",
+    "ko": "플랫폼",
+    "ru": "Журнал"
+  },
+  "journal2": {
+    "en": "journal.",
+    "ko": "저널.",
+    "ru": "платформы."
+  },
+  "allNews": {
+    "en": "News & insights",
+    "ko": "소식과 인사이트",
+    "ru": "Новости и обзоры"
+  },
+  "start": {
+    "en": "Start a conversation.",
+    "ko": "대화를 시작하세요.",
+    "ru": "Начнём разговор."
+  },
+  "cityLine": {
+    "en": "Seoul · Central Asia",
+    "ko": "서울 · 중앙아시아",
+    "ru": "Сеул · Центральная Азия"
+  },
+  "previewNote": {
+    "en": "Design preview · illustrative projects and editorial content · EN / 한국어 / RU",
+    "ko": "디자인 미리보기 · 프로젝트와 콘텐츠는 예시입니다 · EN / 한국어 / RU",
+    "ru": "Макет дизайна · демонстрационные проекты и публикации · EN / 한국어 / RU"
+  },
+  "catalogueCopy": {
+    "en": "Explore opportunities by country and sector. Open a project to see its structure and discuss your interest.",
+    "ko": "국가와 산업별 기회를 살펴보세요. 프로젝트를 열어 정보를 확인하고 관심 분야를 알려주세요.",
+    "ru": "Изучайте возможности по странам и отраслям. Откройте проект, чтобы ознакомиться с его структурой и обсудить ваш интерес."
+  },
+  "search": {
+    "en": "Search projects",
+    "ko": "프로젝트 검색",
+    "ru": "Поиск проектов"
+  },
+  "searchHint": {
+    "en": "Project or keyword",
+    "ko": "프로젝트 또는 키워드",
+    "ru": "Проект или ключевое слово"
+  },
+  "country": {
+    "en": "Country",
+    "ko": "국가",
+    "ru": "Страна"
+  },
+  "sector": {
+    "en": "Sector",
+    "ko": "산업",
+    "ru": "Отрасль"
+  },
+  "allCountries": {
+    "en": "All countries",
+    "ko": "모든 국가",
+    "ru": "Все страны"
+  },
+  "allSectors": {
+    "en": "All sectors",
+    "ko": "모든 산업",
+    "ru": "Все отрасли"
+  },
+  "uz": {
+    "en": "Uzbekistan",
+    "ko": "우즈베키스탄",
+    "ru": "Узбекистан"
+  },
+  "kg": {
+    "en": "Kyrgyzstan",
+    "ko": "키르기스스탄",
+    "ru": "Кыргызстан"
+  },
+  "kz": {
+    "en": "Kazakhstan",
+    "ko": "카자흐스탄",
+    "ru": "Казахстан"
+  },
+  "industry": {
+    "en": "Industry",
+    "ko": "산업",
+    "ru": "Промышленность"
+  },
+  "energy": {
+    "en": "Energy",
+    "ko": "에너지",
+    "ru": "Энергетика"
+  },
+  "environment": {
+    "en": "Environment",
+    "ko": "환경",
+    "ru": "Экология"
+  },
+  "health": {
+    "en": "Healthcare",
+    "ko": "의료",
+    "ru": "Здравоохранение"
+  },
+  "empty": {
+    "en": "No matching entries. Try another search or filter.",
+    "ko": "검색 결과가 없습니다. 검색어나 필터를 변경해 보세요.",
+    "ru": "Совпадений нет. Измените запрос или фильтры."
+  },
+  "entries": {
+    "en": "Entries",
+    "ko": "프로젝트",
+    "ru": "Записей"
+  },
+  "illustrative": {
+    "en": "Illustrative entry",
+    "ko": "예시 프로젝트",
+    "ru": "Демонстрационная запись"
+  },
+  "backProjects": {
+    "en": "Back to projects",
+    "ko": "프로젝트 목록으로",
+    "ru": "Назад к проектам"
+  },
+  "overview": {
+    "en": "Project overview",
+    "ko": "프로젝트 개요",
+    "ru": "О проекте"
+  },
+  "detailCopy": {
+    "en": "The project description follows its public source. It does not imply a KCAP mandate or an agreed role for Korean companies.",
+    "ko": "프로젝트 설명은 공개 출처를 따릅니다. KCAP의 위임이나 한국 기업의 합의된 역할을 의미하지 않습니다.",
+    "ru": "Описание подготовлено по публичному источнику. Оно не означает наличия мандата KCAP или согласованной роли корейских компаний."
+  },
+  "cooperationScope": {
+    "en": "Possible cooperation",
+    "ko": "협력 가능성",
+    "ru": "Возможное сотрудничество"
+  },
+  "information": {
+    "en": "Information & next steps",
+    "ko": "정보 및 다음 단계",
+    "ru": "Информация и дальнейшие шаги"
+  },
+  "infoCopy": {
+    "en": "Figures are reported by the source. Before discussing participation, the project’s current status, counterpart and cooperation conditions must be clarified.",
+    "ko": "수치는 출처에 기재된 정보입니다. 참여 논의 전 현재 상태, 상대방 및 협력 조건을 확인해야 합니다.",
+    "ru": "Числовые параметры приведены по источнику. Перед обсуждением участия необходимо уточнить актуальный статус, контрагента и условия сотрудничества."
+  },
+  "reference": {
+    "en": "Reference",
+    "ko": "참조 번호",
+    "ru": "Номер"
+  },
+  "stage": {
+    "en": "Stage",
+    "ko": "단계",
+    "ru": "Стадия"
+  },
+  "discussProject": {
+    "en": "Discuss this project",
+    "ko": "프로젝트 문의",
+    "ru": "Обсудить проект"
+  },
+  "p1": {
+    "en": "Industrial modernisation",
+    "ko": "산업 현대화",
+    "ru": "Промышленная модернизация"
+  },
+  "p2": {
+    "en": "Clean energy technologies",
+    "ko": "청정에너지 기술",
+    "ru": "Технологии чистой энергетики"
+  },
+  "p3": {
+    "en": "Water & regional resilience",
+    "ko": "물과 지역 지속가능성",
+    "ru": "Вода и устойчивость регионов"
+  },
+  "p4": {
+    "en": "Healthcare infrastructure",
+    "ko": "의료 인프라",
+    "ru": "Медицинская инфраструктура"
+  },
+  "p1copy": {
+    "en": "Smart manufacturing, industrial equipment and process automation.",
+    "ko": "스마트 제조, 산업 장비 및 공정 자동화.",
+    "ru": "Умное производство, промышленное оборудование и автоматизация процессов."
+  },
+  "p2copy": {
+    "en": "Solar technologies, generation and energy systems.",
+    "ko": "태양광 기술, 발전 및 에너지 시스템.",
+    "ru": "Солнечные технологии, генерация и энергетические системы."
+  },
+  "p3copy": {
+    "en": "Water technology, irrigation and utilities.",
+    "ko": "수처리 기술, 관개 및 공공 인프라.",
+    "ru": "Водные технологии, орошение и коммунальная инфраструктура."
+  },
+  "p4copy": {
+    "en": "Medical technology, equipment and healthcare facilities.",
+    "ko": "의료 기술, 장비 및 의료 시설.",
+    "ru": "Медицинские технологии, оборудование и объекты здравоохранения."
+  },
+  "newsCopy": {
+    "en": "Regional developments, technology and business cooperation between Korea and Central Asia.",
+    "ko": "한국과 중앙아시아의 지역 동향, 기술 및 비즈니스 협력.",
+    "ru": "События региона, технологии и деловое сотрудничество Кореи и Центральной Азии."
+  },
+  "newsDemo": {
+    "en": "Sample editorial content for the design review.",
+    "ko": "디자인 검토를 위한 예시 콘텐츠입니다.",
+    "ru": "Демонстрационная публикация для оценки дизайна."
+  },
+  "n1": {
+    "en": "A space for Korea–Central Asia cooperation",
+    "ko": "한국과 중앙아시아 협력을 위한 공간",
+    "ru": "Пространство сотрудничества Кореи и Центральной Азии"
+  },
+  "n2": {
+    "en": "From regional needs to technology dialogue",
+    "ko": "지역 수요에서 기술 대화로",
+    "ru": "От региональных потребностей к диалогу о технологиях"
+  },
+  "n3": {
+    "en": "Exploring cooperation across the corridor",
+    "ko": "지역 간 협력 가능성 탐색",
+    "ru": "Возможности межрегионального сотрудничества"
+  },
+  "insights": {
+    "en": "Insights",
+    "ko": "인사이트",
+    "ru": "Аналитика"
+  },
+  "backNews": {
+    "en": "Back to news",
+    "ko": "소식 목록으로",
+    "ru": "Назад к новостям"
+  },
+  "articleHeading": {
+    "en": "From interest to a conversation",
+    "ko": "관심에서 대화로",
+    "ru": "От интереса к разговору"
+  },
+  "articleBody": {
+    "en": "The platform brings projects and regional needs into a common space for discussion. Companies can explore a topic, describe their capabilities and identify the questions that matter before considering further cooperation.",
+    "ko": "플랫폼은 프로젝트와 지역 수요를 함께 논의하는 공간입니다. 기업은 관심 주제를 탐색하고 역량을 소개하며 후속 협력을 검토하기 전에 중요한 질문을 정리할 수 있습니다.",
+    "ru": "Платформа объединяет проекты и региональные потребности в общем пространстве для обсуждения. Компании могут изучить тему, описать свои компетенции и определить важные вопросы перед рассмотрением дальнейшего сотрудничества."
+  },
+  "articleNext": {
+    "en": "What comes next",
+    "ko": "다음 단계",
+    "ru": "Дальнейшее развитие"
+  },
+  "articleNextCopy": {
+    "en": "The content will develop with the team’s materials and feedback from companies and organisations in Korea and Central Asia.",
+    "ko": "팀의 자료와 한국 및 중앙아시아 기업·기관의 의견을 반영하여 콘텐츠를 발전시켜 나갑니다.",
+    "ru": "Содержание будет развиваться на основе материалов команды и обратной связи компаний и организаций Кореи и Центральной Азии."
+  },
+  "contactCopy": {
+    "en": "Tell us about your company, a project or the cooperation you would like to explore.",
+    "ko": "기업, 프로젝트 또는 희망하는 협력 내용을 알려주세요.",
+    "ru": "Расскажите о компании, проекте или сотрудничестве, которое вы хотели бы обсудить."
+  },
+  "sharedInterest": {
+    "en": "A shared interest. A clear next step.",
+    "ko": "공통의 관심. 명확한 다음 단계.",
+    "ru": "Общий интерес. Понятный следующий шаг."
+  },
+  "contactAside": {
+    "en": "A short introduction helps the team understand your sector, regional interests and the purpose of the conversation.",
+    "ko": "간단한 소개를 통해 산업 분야, 관심 지역 및 대화의 목적을 이해할 수 있습니다.",
+    "ru": "Краткое представление поможет команде понять вашу отрасль, географию интереса и цель разговора."
+  },
+  "noSensitive": {
+    "en": "Please do not include confidential documents in an initial enquiry.",
+    "ko": "첫 문의에는 기밀 문서를 포함하지 마세요.",
+    "ru": "Не включайте конфиденциальные документы в первоначальное обращение."
+  },
+  "name": {
+    "en": "Your name",
+    "ko": "이름",
+    "ru": "Ваше имя"
+  },
+  "organisation": {
+    "en": "Organisation",
+    "ko": "기관 또는 기업",
+    "ru": "Организация"
+  },
+  "email": {
+    "en": "Work email",
+    "ko": "업무 이메일",
+    "ru": "Рабочая почта"
+  },
+  "interest": {
+    "en": "Topic of interest",
+    "ko": "관심 주제",
+    "ru": "Тема обращения"
+  },
+  "general": {
+    "en": "General cooperation",
+    "ko": "일반 협력",
+    "ru": "Общее сотрудничество"
+  },
+  "projectInterest": {
+    "en": "A specific project",
+    "ko": "특정 프로젝트",
+    "ru": "Конкретный проект"
+  },
+  "technologyInterest": {
+    "en": "Technology & market opportunities",
+    "ko": "기술 및 시장 기회",
+    "ru": "Технологии и рыночные возможности"
+  },
+  "institutionInterest": {
+    "en": "Institutional dialogue",
+    "ko": "기관 간 대화",
+    "ru": "Институциональный диалог"
+  },
+  "message": {
+    "en": "Your message",
+    "ko": "문의 내용",
+    "ru": "Сообщение"
+  },
+  "send": {
+    "en": "Send enquiry",
+    "ko": "문의 보내기",
+    "ru": "Отправить запрос"
+  },
+  "formDemo": {
+    "en": "Preview form — enquiries are not transmitted.",
+    "ko": "미리보기 양식이며 문의 내용은 전송되지 않습니다.",
+    "ru": "Демонстрационная форма — запросы не отправляются."
+  },
+  "formDone": {
+    "en": "Preview complete. Your enquiry has not been sent.",
+    "ko": "미리보기 완료. 문의 내용은 전송되지 않았습니다.",
+    "ru": "Просмотр формы завершён. Запрос не отправлен."
+  },
+  "legal": {
+    "en": "Privacy & legal information",
+    "ko": "개인정보 및 법적 정보",
+    "ru": "Правовая информация"
+  },
+  "legalHeading": {
+    "en": "Before publication.",
+    "ko": "게시 전 준비 사항.",
+    "ru": "Перед публикацией."
+  },
+  "legalCopy": {
+    "en": "The published site will include the operator’s details, privacy notice and contact information. These texts will be prepared separately. This design preview does not send enquiries or use analytics.",
+    "ko": "공개 사이트에는 운영자 정보, 개인정보 처리 안내 및 연락처가 포함됩니다. 해당 문서는 별도로 준비합니다. 이 디자인 미리보기는 문의를 전송하거나 분석 도구를 사용하지 않습니다.",
+    "ru": "На опубликованном сайте будут сведения об операторе, политика конфиденциальности и контакты. Эти тексты готовятся отдельно. Макет не отправляет запросы и не использует аналитику."
+  },
+  "home": {
+    "en": "Home",
+    "ko": "홈",
+    "ru": "Главная"
+  },
+  "about": {
+    "en": "About KCAP",
+    "ko": "KCAP 소개",
+    "ru": "О платформе"
+  },
+  "bridge1": {
+    "en": "A strong bridge.",
+    "ko": "튼튼한 가교.",
+    "ru": "Прочный мост."
+  },
+  "bridge2": {
+    "en": "An integrated approach.",
+    "ko": "통합된 접근.",
+    "ru": "Единый подход."
+  },
+  "aboutCopy": {
+    "en": "KCAP builds a strong bridge between Korean companies and projects in Central Asia. We combine the functions of a business platform, project consulting and strategic advisory: we structure opportunities, work through cooperation terms, organise interaction between the parties, and support the development of projects and agreements.",
+    "ko": "KCAP은 한국 기업과 중앙아시아 프로젝트 사이에 튼튼한 가교를 구축합니다. 비즈니스 플랫폼, 프로젝트 컨설팅 및 전략 자문을 결합하여 기회를 구조화하고 협력 조건을 검토하며 당사자 간 소통을 조직하고 프로젝트와 합의의 발전을 지원합니다.",
+    "ru": "KCAP выстраивает прочный мост между корейскими компаниями и проектами в Центральной Азии. Мы совмещаем функции деловой платформы, проектного консалтинга и стратегического консультирования: структурируем возможности, прорабатываем условия сотрудничества, организуем взаимодействие сторон и сопровождаем развитие проектов и договорённости."
+  },
+  "aboutStatus": {
+    "en": "Working wording from Brief v0.2. Translations require review.",
+    "ko": "Brief v0.2의 작업 문구입니다. 번역 검토가 필요합니다.",
+    "ru": "Рабочая формулировка из Brief v0.2. Переводы — для вычитки."
+  },
+  "combined": {
+    "en": "Platform, consulting & advisory",
+    "ko": "플랫폼, 컨설팅 및 자문",
+    "ru": "Платформа, консалтинг и advisory"
+  },
+  "businessPlatform": {
+    "en": "Business platform",
+    "ko": "비즈니스 플랫폼",
+    "ru": "Деловая платформа"
+  },
+  "businessPlatformCopy": {
+    "en": "Presenting opportunities and organising interaction between the parties.",
+    "ko": "기회를 소개하고 당사자 간 소통을 조직합니다.",
+    "ru": "Представление возможностей и организация взаимодействия сторон."
+  },
+  "projectConsulting": {
+    "en": "Project consulting",
+    "ko": "프로젝트 컨설팅",
+    "ru": "Проектный консалтинг"
+  },
+  "projectConsultingCopy": {
+    "en": "Structuring projects and working through cooperation terms.",
+    "ko": "프로젝트를 구조화하고 협력 조건을 검토합니다.",
+    "ru": "Структурирование проектов и проработка условий сотрудничества."
+  },
+  "advisory": {
+    "en": "Strategic advisory",
+    "ko": "전략 자문",
+    "ru": "Стратегическое консультирование"
+  },
+  "advisoryCopy": {
+    "en": "Supporting the development of projects and agreements.",
+    "ko": "프로젝트와 합의의 발전을 지원합니다.",
+    "ru": "Сопровождение развития проектов и договорённостей."
+  },
+  "oneEntity": {
+    "en": "Under the agreed model, these functions are combined within one legal entity. Its name and legal details remain to be confirmed.",
+    "ko": "합의된 모델에 따라 이러한 기능을 하나의 법인에서 통합합니다. 법인명과 법적 세부 사항은 확인이 필요합니다.",
+    "ru": "По принятой модели функции объединены в рамках одного юридического лица. Его наименование и реквизиты требуют подтверждения."
+  },
+  "regionalApproach": {
+    "en": "Regional approach",
+    "ko": "지역별 접근",
+    "ru": "Региональный подход"
+  },
+  "heroStatus": {
+    "en": "Proposed revision — for approval",
+    "ko": "승인을 위한 문구 제안",
+    "ru": "Предложенная редакция — на согласование"
+  },
+  "roleCopy": {
+    "en": "KCAP builds a strong bridge between Korean companies and projects in Central Asia, turning initial interest into structured projects and clear agreements.",
+    "ko": "KCAP은 한국 기업과 중앙아시아 프로젝트 사이에 튼튼한 가교를 구축하여 첫 관심을 구조화된 프로젝트와 명확한 합의로 발전시킵니다.",
+    "ru": "KCAP выстраивает прочный мост между корейскими компаниями и проектами в Центральной Азии, превращая первый интерес в структурированные проекты и понятные договорённости."
+  },
+  "geographyCopy": {
+    "en": "KCAP works on projects across Central Asia. For Korean companies, we provide a unified professional interface and a coordinated process across the region.",
+    "ko": "KCAP은 중앙아시아 전역에서 프로젝트를 진행합니다. 한국 기업을 위해 지역 내 통합된 전문 창구와 일관된 업무 절차를 제공합니다.",
+    "ru": "KCAP ведёт проекты по Центральной Азии. Для корейских компаний мы обеспечиваем единый профессиональный интерфейс и согласованный процесс работы по региону."
+  },
+  "processHeading": {
+    "en": "How we work",
+    "ko": "업무 방식",
+    "ru": "Как мы работаем"
+  },
+  "processSource": {
+    "en": "Initial contact and clarification of interest, provision of structured project information, organisation of dialogue and support through to the next step.",
+    "ko": "첫 연락과 관심 사항 확인, 구조화된 프로젝트 정보 제공, 대화 조직 및 다음 단계까지의 지원.",
+    "ru": "Первичный контакт и уточнение интереса, предоставление структурированной информации по проекту, организация диалога и сопровождение до следующего шага."
+  },
+  "processSourceStatus": {
+    "en": "Brief wording. The ending remains open for revision.",
+    "ko": "Brief 문구입니다. 마지막 표현은 수정 검토 대상입니다.",
+    "ru": "Формулировка Brief. Окончание остаётся открытым для редакции."
+  },
+  "processProposal": {
+    "en": "Proposed: initial contact and clarification of interest, structured project information, dialogue between the parties and continued support for the development of projects and agreements.",
+    "ko": "제안: 첫 연락과 관심 사항 확인, 구조화된 프로젝트 정보 제공, 당사자 간 대화 및 프로젝트와 합의의 발전에 대한 지속적인 지원.",
+    "ru": "Предложение: первичный контакт и уточнение интереса, структурированная информация по проекту, диалог сторон и непрерывное сопровождение развития проектов и договорённостей."
+  },
+  "shared1": {
+    "en": "A shared interest.",
+    "ko": "공통의 관심.",
+    "ru": "Общий интерес."
+  },
+  "shared2": {
+    "en": "Developing cooperation.",
+    "ko": "협력의 발전.",
+    "ru": "Развитие сотрудничества."
+  },
+  "cooperationIntro": {
+    "en": "A conversation can begin with a company’s regional interests or a specific Central Asian project.",
+    "ko": "기업의 지역 관심 또는 특정 중앙아시아 프로젝트에서 대화를 시작할 수 있습니다.",
+    "ru": "Начать диалог можно с интереса компании к региону или с конкретного проекта Центральной Азии."
+  },
+  "cooperationStatus": {
+    "en": "Content proposal. The full wording requires approval.",
+    "ko": "콘텐츠 제안입니다. 전체 문구는 승인이 필요합니다.",
+    "ru": "Предложение по содержанию. Полный текст раздела требует согласования."
+  },
+  "forKorea": {
+    "en": "Explore regional opportunities",
+    "ko": "지역 기회 논의",
+    "ru": "Обсудить возможности региона"
+  },
+  "forKoreaCopy": {
+    "en": "Introduce your company, capabilities and regional interests. Together we can identify topics for further work.",
+    "ko": "기업, 역량 및 관심 지역을 소개해 주세요. 후속 검토 주제를 함께 정리합니다.",
+    "ru": "Представьте вашу компанию, компетенции и географию интереса. Вместе определим темы для дальнейшей проработки."
+  },
+  "companyInterest": {
+    "en": "Introduce your company",
+    "ko": "기업 소개",
+    "ru": "Представить компанию"
+  },
+  "sponsors": {
+    "en": "Central Asian project sponsors",
+    "ko": "중앙아시아 프로젝트 추진자",
+    "ru": "Инициаторы проектов Центральной Азии"
+  },
+  "forSponsors": {
+    "en": "Introduce a project",
+    "ko": "프로젝트 소개",
+    "ru": "Представить проект"
+  },
+  "forSponsorsCopy": {
+    "en": "Describe the project, its stage and the intended role of the Korean side. This provides a starting point for discussion.",
+    "ko": "프로젝트, 진행 단계 및 한국 측의 예상 역할을 설명해 주세요. 협력 논의의 출발점이 됩니다.",
+    "ru": "Опишите проект, его стадию и предполагаемую роль корейской стороны. Это станет основой для обсуждения сотрудничества."
+  },
+  "submitProject": {
+    "en": "Discuss a project",
+    "ko": "프로젝트 논의",
+    "ru": "Обсудить проект"
+  },
+  "tj": {
+    "en": "Tajikistan",
+    "ko": "타지키스탄",
+    "ru": "Таджикистан"
+  },
+  "tm": {
+    "en": "Turkmenistan",
+    "ko": "투르크메니스탄",
+    "ru": "Туркменистан"
+  },
+  "allStages": {
+    "en": "All stages",
+    "ko": "모든 단계",
+    "ru": "Все стадии"
+  },
+  "concept": {
+    "en": "Concept",
+    "ko": "구상",
+    "ru": "Концепция"
+  },
+  "discussion": {
+    "en": "In discussion",
+    "ko": "논의 중",
+    "ru": "Обсуждение"
+  },
+  "preparation": {
+    "en": "In preparation",
+    "ko": "준비 중",
+    "ru": "Подготовка"
+  },
+  "location": {
+    "en": "Location",
+    "ko": "위치",
+    "ru": "Локация"
+  },
+  "notProvided": {
+    "en": "Not provided — demonstration template",
+    "ko": "미제공 — 예시 템플릿",
+    "ru": "Не предоставлено — демонстрационный шаблон"
+  },
+  "parameters": {
+    "en": "Key parameters",
+    "ko": "주요 매개변수",
+    "ru": "Ключевые параметры"
+  },
+  "cooperationFormat": {
+    "en": "Cooperation format",
+    "ko": "협력 방식",
+    "ru": "Формат сотрудничества"
+  },
+  "koreanRole": {
+    "en": "Expected role of the Korean side",
+    "ko": "한국 측의 예상 역할",
+    "ru": "Предполагаемая роль корейской стороны"
+  },
+  "updated": {
+    "en": "Last updated",
+    "ko": "최종 업데이트",
+    "ru": "Дата обновления"
+  },
+  "unconfirmed": {
+    "en": "Potential technological cooperation; contractual and commercial terms require agreement.",
+    "ko": "기술협력 가능성; 계약 및 상업 조건은 협의가 필요합니다.",
+    "ru": "Потенциальное технологическое сотрудничество; договорные и коммерческие условия требуют согласования."
+  },
+  "requestInfo": {
+    "en": "Request more information",
+    "ko": "추가 정보 요청",
+    "ru": "Запросить информацию"
+  },
+  "contactPending": {
+    "en": "Official contact details will be added after confirmation.",
+    "ko": "공식 연락처는 확인 후 추가됩니다.",
+    "ru": "Официальные контакты будут добавлены после подтверждения."
+  },
+  "newsDate": {
+    "en": "Publication date",
+    "ko": "게시일",
+    "ru": "Дата публикации"
+  },
+  "privacy": {
+    "en": "Privacy policy",
+    "ko": "개인정보 처리방침",
+    "ru": "Политика конфиденциальности"
+  },
+  "legalNotice": {
+    "en": "Legal notice",
+    "ko": "법적 고지",
+    "ru": "Юридическая информация"
+  },
+  "privacyPending": {
+    "en": "The privacy policy will be supplied after the operator and enquiry process are confirmed.",
+    "ko": "운영자 및 문의 절차 확인 후 개인정보 처리방침이 제공됩니다.",
+    "ru": "Политика конфиденциальности будет предоставлена после определения оператора и порядка обработки обращений."
+  },
+  "legalPending": {
+    "en": "The operator’s name, registration details and official contacts require confirmation.",
+    "ko": "운영자명, 등록 정보 및 공식 연락처는 확인이 필요합니다.",
+    "ru": "Наименование оператора, реквизиты и официальные контакты требуют подтверждения."
+  },
+  "reviewBanner": {
+    "en": "Publication preparation · selected public projects and source-based news · preview, not a live public site",
+    "ko": "게시 준비 · 공개 프로젝트 선정 및 출처 기반 소식 · 공개 사이트가 아닌 미리보기",
+    "ru": "Подготовка к публикации · отобранные публичные проекты и новости по источникам · сайт ещё не опубликован"
+  },
+  "directions": {
+    "en": "Directions",
+    "ko": "사업 분야",
+    "ru": "Направления работы"
+  },
+  "directionsHeading": {
+    "en": "Technology & sectors.",
+    "ko": "기술과 산업.",
+    "ru": "Технологии и отрасли."
+  },
+  "directionsSub": {
+    "en": "Opportunities for cooperation.",
+    "ko": "협력의 가능성.",
+    "ru": "Возможности сотрудничества."
+  },
+  "directionsCopy": {
+    "en": "We consider projects and cooperation in the following areas. The specific format depends on the project’s needs and the parties’ interests.",
+    "ko": "다음 분야의 프로젝트와 협력을 검토합니다. 구체적인 방식은 프로젝트 수요와 당사자의 관심에 따라 정합니다.",
+    "ru": "Мы рассматриваем проекты и сотрудничество в следующих направлениях. Конкретный формат работы определяется потребностью проекта и интересом сторон."
+  },
+  "allDirections": {
+    "en": "All directions",
+    "ko": "모든 분야",
+    "ru": "Все направления"
+  },
+  "sourceNote": {
+    "en": "Publicly described opportunities selected for review. Source-stated parameters, current availability and participation terms require confirmation.",
+    "ko": "공개 자료에서 검토 대상으로 선정한 기회입니다. 출처의 수치, 현재 가능 여부 및 참여 조건은 확인이 필요합니다.",
+    "ru": "Отобранные публичные возможности для рассмотрения. Параметры источника, текущая доступность и условия участия требуют подтверждения."
+  },
+  "sourceReference": {
+    "en": "Source reference",
+    "ko": "출처 참조",
+    "ru": "ID источника"
+  },
+  "sourceLabel": {
+    "en": "Public project profile",
+    "ko": "공개 프로젝트 프로필",
+    "ru": "Публичная карточка источника"
+  },
+  "sourceReviewed": {
+    "en": "Source reviewed",
+    "ko": "출처 확인일",
+    "ru": "Источник просмотрен"
+  },
+  "sourceDate": {
+    "en": "Source publication date",
+    "ko": "출처 게시일",
+    "ru": "Дата публикации источника"
+  },
+  "officialSource": {
+    "en": "Official source",
+    "ko": "공식 출처",
+    "ru": "Официальный источник"
+  },
+  "externalNews": {
+    "en": "Regional news based on official publications. KCAP is not presented as a party to these agreements.",
+    "ko": "공식 발표에 근거한 지역 소식입니다. KCAP이 협약 당사자라는 의미는 아닙니다.",
+    "ru": "События региона по официальным публикациям. KCAP не заявляется участником этих соглашений."
+  },
+  "events": {
+    "en": "Events",
+    "ko": "행사",
+    "ru": "Мероприятия"
+  },
+  "eventDate": {
+    "en": "Event date",
+    "ko": "행사일",
+    "ru": "Дата мероприятия"
+  },
+  "regionalNews": {
+    "en": "Regional developments",
+    "ko": "지역 동향",
+    "ru": "События региона"
+  }
+}
