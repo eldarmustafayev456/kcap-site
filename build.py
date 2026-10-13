@@ -1,5 +1,5 @@
 """Dependency-free multilingual KCAP static site builder."""
-import os,json,html,shutil
+import os,json,html,shutil,hashlib
 from pathlib import Path
 from urllib.parse import quote
 ROOT=Path(__file__).resolve().parent
@@ -18,7 +18,10 @@ if PUBLIC and not CONFIG.get('korean_review_approved'):raise SystemExit('Public 
 def e(v):return html.escape(str(v),quote=True)
 def t(k,l):return COPY.get(k,{}).get(l,{'en':'Translation pending','ko':'번역 준비 중','ru':'Перевод готовится'}[l])
 def url(l,path=''):return BASE+'/'+l+'/'+path.strip('/')+('/' if path else '')
-def img(name):return BASE+'/assets/'+name
+def img(name):
+ asset=ROOT/'assets'/name
+ version='?v='+hashlib.sha256(asset.read_bytes()).hexdigest()[:10] if asset.is_file() and name.endswith(('.css','.js')) else ''
+ return BASE+'/assets/'+name+version
 def a(label,href,cls=''):return f'<a class="{cls}" href="{e(href)}">{e(label)}</a>'
 def link(k,l,path,cls='text-link'):return a(t(k,l),url(l,path),cls)
 def section(content,cls='section'):return f'<section class="{cls}">{content}</section>'
@@ -30,8 +33,8 @@ def projectcard(p,l):
  return f'<article class="project-row" data-country="{p["country"]}" data-sector="{p["sector"]}" data-stage="{p["stage"]}" data-search="{e(search)}"><div class="eyebrow">{e(t(p["sector"],l))}</div><a class="project-title" href="{url(l,path)}"><h3>{e(p["title"].get(l,t("pending",l)))}</h3><span aria-hidden="true">↗</span></a><p>{e(p["description"].get(l,t("pending",l)))}</p><div class="submeta">{e(t(p["country"],l))} · {e(t(p["stage"],l))}</div></article>'
 def newsdate(n,l):return n.get('event_date') or n['source_date']
 def newscard(n,l):
- photo=f'<img class="news-photo" loading="lazy" width="960" height="1280" src="{img("uzbekistan-korea-forum-2026.jpg")}" alt="{e(n["caption"][l])}">' if n.get('image_asset') else ''
- return f'<article class="news-item">{photo}<div class="news-metadata"><span class="eyebrow">{e(t(n["category"],l))}</span><time class="news-date" datetime="{newsdate(n,l)}">{newsdate(n,l)}</time></div><div class="news-copy"><h3>{a(n["title"][l],url(l,"news/"+n["id"]))}</h3><p>{e(n["summary"][l])}</p></div><span class="arrow" aria-hidden="true">↗</span></article>'
+ photo=f'<a class="news-media" href="{url(l,"news/"+n["id"])}" tabindex="-1" aria-hidden="true"><img class="news-photo" loading="lazy" width="960" height="1280" src="{img("uzbekistan-korea-forum-2026.jpg")}" alt="{e(n["caption"][l])}"></a>' if n.get('image_asset') else ''
+ return f'<article class="news-item {"with-image" if photo else "without-image"}">{photo}<div class="news-content"><div class="news-metadata"><span class="eyebrow">{e(t(n["category"],l))}</span><time class="news-date" datetime="{newsdate(n,l)}">{newsdate(n,l)}</time></div><div class="news-copy"><h3>{a(n["title"][l],url(l,"news/"+n["id"]))}</h3><p>{e(n["summary"][l])}</p></div><span class="arrow" aria-hidden="true">↗</span></div></article>'
 def sectors(l):return '<div class="sector-grid">'+''.join(f'<a class="sector-tile" href="{url(l,"projects")}?sector={s["key"]}"><span class="eyebrow">{i+1:02}</span><h3>{e(s["title"][l])}</h3><p>{e(s["description"][l])}</p><span class="sector-arrow" aria-hidden="true">↗</span></a>' for i,s in enumerate(SECTORS))+'</div>'
 def process(l):
  return '<div class="section-heading"><h2>'+e(t('processHeading',l))+'</h2>'+link('talk',l,'contact')+'</div><div class="steps">'+''.join(f'<div class="step"><div class="marker"></div><div class="eyebrow">0{i+1}</div><h3>{e(t(k,l))}</h3><p>{e(t(k+"Copy",l).replace(" Предложенная редакция.","").replace(" Proposed wording.","").replace(" 제안 문구입니다.",""))}</p></div>' for i,k in enumerate(('identify','review','connect','develop')))+'</div>'
@@ -42,7 +45,7 @@ def homepage(l):
  corridor=section('<div class="serif">'+e(t('corridor1',l))+'<br>'+e(t('corridor2',l))+'</div><div class="cities">'+''.join(f'<div class="city"><div class="eyebrow">{name}</div><div class="time"><span data-zone="{zone}">—</span><span class="zone">UTC{offset}</span></div></div>' for name,zone,offset in cities)+'</div>','corridor')
  featured=section('<div class="section-heading"><h2>'+e(t('projects',l))+'</h2>'+link('explore',l,'projects')+'</div><div class="project-list">'+''.join(projectcard(p,l) for p in PROJECTS if p['featured'])+'</div>'+note('sourceNote',l))
  dirs=section('<div class="section-heading"><h2>'+e(t('directions',l))+'</h2>'+link('allDirections',l,'directions')+'</div>'+sectors(l))
- news=section('<div class="section-heading"><h2>'+e(t('news',l))+'</h2>'+link('backNews',l,'news')+'</div><div class="news-list">'+''.join(newscard(n,l) for n in NEWS)+'</div>')
+ news=section('<div class="section-heading"><h2>'+e(t('news',l))+'</h2>'+link('allNews',l,'news')+'</div><div class="news-list news-home">'+''.join(newscard(n,l) for n in NEWS)+'</div>')
  return hero+discover+corridor+section(process(l))+dirs+featured+news
 
 def catalogue(l):
@@ -66,7 +69,7 @@ def info(l,key):
  if key=='about':return intro('about',l,'aboutCopy')+section('<div class="audience-grid">'+''.join('<article><h2>'+e(t(k,l))+'</h2><p>'+e(t(k+'Copy',l))+'</p></article>' for k in ('businessPlatform','projectConsulting','advisory'))+'</div><h2 class="spaced">'+e(t('regionalApproach',l))+'</h2><p>'+e(t('geographyCopy',l))+'</p>')
  if key=='cooperation':return intro(key,l,'cooperationIntro')+section('<div class="audience-grid">'+''.join('<article><h2>'+e(t(k,l))+'</h2><p class="spaced">'+e(t(k+'Copy',l))+'</p>'+link(action,l,'contact','action')+'</article>' for k,action in [('forKorea','companyInterest'),('forSponsors','submitProject')])+'</div>')+section(process(l))+section('<h2>'+e(t('directions',l))+'</h2>'+sectors(l))
  if key=='directions':return intro(key,l,'directionsCopy')+section(sectors(l))
- if key=='news':return intro(key,l,'newsCopy')+section('<div class="news-list">'+''.join(newscard(n,l) for n in NEWS)+'</div>')
+ if key=='news':return intro(key,l,'newsCopy')+section('<div class="news-list news-index">'+''.join(newscard(n,l) for n in NEWS)+'</div>')
  if key=='privacy':return intro(key,l)+section('<p>'+e(t('privacyPending',l))+'</p>')
  if key=='legal-notice':return intro('legalNotice',l)+section('<p>'+e({'en':'Operator registration details are being prepared. For enquiries: info@koreacentralasia.com.','ko':'운영자 등록 정보를 준비하고 있습니다. 문의: info@koreacentralasia.com.','ru':'Реквизиты оператора готовятся. Для обращений: info@koreacentralasia.com.'}[l])+'</p>')
  raise ValueError(key)

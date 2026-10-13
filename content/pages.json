@@ -230,9 +230,9 @@
     "ru": "платформы."
   },
   "allNews": {
-    "en": "News & insights",
-    "ko": "소식과 인사이트",
-    "ru": "Новости и обзоры"
+    "ru": "Все новости",
+    "en": "All news",
+    "ko": "모든 소식"
   },
   "start": {
     "en": "Start a conversation.",
