@@ -50,4 +50,4 @@ The form prepares an email with visitor language and project reference in the vi
 - Replace the file-upload editing workflow with direct authenticated saving if required.
 - Confirm HTTPS certificate issuance for the custom domain.
 
-The website currently has no analytics or tracking cookies. HTTPS for the GitHub Pages URL is provided by hosting. Primary domain: www.koreacentralasia.com. Its www CNAME points to eldarmustafayev456.github.io. The apex and mail records remain on aHOST, since MX currently points to the apex.
+The website currently has no analytics or tracking cookies. HTTPS for the GitHub Pages URL is provided by hosting. Primary domain: www.koreacentralasia.com. Its www CNAME points to eldarmustafayev456.github.io. The apex has four GitHub Pages A records and redirects to www. Mail stays on aHOST via MX → mail.koreacentralasia.com → 167.235.222.200; calendar/contact/FTP routes also retain the aHOST endpoint.
