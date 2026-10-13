@@ -14,12 +14,12 @@ python verify.py
 python -m http.server 8770 --directory dist
 ```
 
-GitHub Pages build uses `BASE_PATH=/kcap-site` and `SITE_ORIGIN=https://eldarmustafayev456.github.io`.
+GitHub Pages build uses an empty `BASE_PATH` and `SITE_ORIGIN=https://www.koreacentralasia.com`.
 For a custom domain or root hosting, use an empty `BASE_PATH` and the confirmed `SITE_ORIGIN`.
 
 ## Content updates without editing code
 
-Open `/kcap-site/admin/`. Select pages, projects, news or sectors. Edit the fields, including EN / 한국어 / RU. Save the update file, then upload it to the repository's `content` folder, replacing the same filename. Commit the update in GitHub. The build validates links and produces the updated pages.
+Open `https://www.koreacentralasia.com/admin/`. Select pages, projects, news or sectors. Edit the fields, including EN / 한국어 / RU. Save the update file, then upload it to the repository's `content` folder, replacing the same filename. Commit the update in GitHub. The build validates links and produces the updated pages.
 
 The editor prepares a file locally; it does not directly save to GitHub. GitHub sign-in and write permission are required for uploading it. To edit an existing draft, import the corresponding original content file from GitHub. Only published records are served in the website editor. Project and news records support `draft` / `published`; featured projects appear on the homepage.
 
@@ -48,6 +48,6 @@ The form prepares an email with visitor language and project reference in the vi
 - Confirm operator name/registration information; supply privacy and legal texts.
 - Connect server-side form delivery and anti-spam; verify received test messages.
 - Replace the file-upload editing workflow with direct authenticated saving if required.
-- Confirm primary domain and connect DNS/HTTPS.
+- Confirm HTTPS certificate issuance for the custom domain.
 
-The website currently has no analytics or tracking cookies. HTTPS for the GitHub Pages URL is provided by hosting. A custom domain has not been configured.
+The website currently has no analytics or tracking cookies. HTTPS for the GitHub Pages URL is provided by hosting. Primary domain: www.koreacentralasia.com. Its www CNAME points to eldarmustafayev456.github.io. The apex and mail records remain on aHOST, since MX currently points to the apex.

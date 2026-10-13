@@ -21,8 +21,8 @@ jobs:
       - name: Build multilingual website
         env:
           PUBLIC_RELEASE: '1'
-          BASE_PATH: /kcap-site
-          SITE_ORIGIN: https://eldarmustafayev456.github.io
+          BASE_PATH: ''
+          SITE_ORIGIN: https://www.koreacentralasia.com
         run: python build.py
       - name: Check generated pages
         run: python verify.py
