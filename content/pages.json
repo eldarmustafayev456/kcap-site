@@ -680,9 +680,9 @@
     "ru": "Развитие сотрудничества."
   },
   "cooperationIntro": {
-    "en": "A conversation can begin with a company’s regional interests or a specific Central Asian project.",
+    "en": "KCAP works with two sides: Korean companies and project initiators in Central Asia. Cooperation can begin with an interest in the region or with a specific project.",
     "ko": "기업의 지역 관심 또는 특정 중앙아시아 프로젝트에서 대화를 시작할 수 있습니다.",
-    "ru": "Начать диалог можно с интереса компании к региону или с конкретного проекта Центральной Азии."
+    "ru": "KCAP работает с двумя сторонами: корейскими компаниями и инициаторами проектов в Центральной Азии. Сотрудничество может начаться с интереса к региону или с конкретного проекта."
   },
   "cooperationStatus": {
     "en": "Content proposal. The full wording requires approval.",
@@ -690,14 +690,14 @@
     "ru": "Предложение по содержанию. Полный текст раздела требует согласования."
   },
   "forKorea": {
-    "en": "Explore regional opportunities",
+    "en": "For Korean companies",
     "ko": "지역 기회 논의",
-    "ru": "Обсудить возможности региона"
+    "ru": "Для корейских компаний"
   },
   "forKoreaCopy": {
-    "en": "Introduce your company, capabilities and regional interests. Together we can identify topics for further work.",
+    "en": "Tell us about your company, its capabilities and regional interests: sector, country and intended role — supply, contracting, investment or joint project development. We identify opportunities, provide structured project information and organise dialogue with initiators. Where interest is confirmed, KCAP works through participation terms and supports the development of the project and agreements.",
     "ko": "기업, 역량 및 관심 지역을 소개해 주세요. 후속 검토 주제를 함께 정리합니다.",
-    "ru": "Представьте вашу компанию, компетенции и географию интереса. Вместе определим темы для дальнейшей проработки."
+    "ru": "Расскажите о компании, её компетенциях и интересах в регионе: отрасль, страна, предполагаемая роль — поставки, подрядные работы, инвестиции или совместное развитие проекта. Мы подбираем возможности, предоставляем структурированную информацию по проектам и организуем диалог с инициаторами. Если интерес подтверждается, KCAP прорабатывает условия участия и сопровождает развитие проекта и договорённостей."
   },
   "companyInterest": {
     "en": "Introduce your company",
@@ -710,19 +710,19 @@
     "ru": "Инициаторы проектов Центральной Азии"
   },
   "forSponsors": {
-    "en": "Introduce a project",
+    "en": "For project initiators in Central Asia",
     "ko": "프로젝트 소개",
-    "ru": "Представить проект"
+    "ru": "Для инициаторов проектов в Центральной Азии"
   },
   "forSponsorsCopy": {
-    "en": "Describe the project, its stage and the intended role of the Korean side. This provides a starting point for discussion.",
+    "en": "Describe the project, its stage, its needs and the expected role of the Korean side. We help structure the information for Korean companies and organise interaction with interested parties.",
     "ko": "프로젝트, 진행 단계 및 한국 측의 예상 역할을 설명해 주세요. 협력 논의의 출발점이 됩니다.",
-    "ru": "Опишите проект, его стадию и предполагаемую роль корейской стороны. Это станет основой для обсуждения сотрудничества."
+    "ru": "Опишите проект, его стадию, потребность и ожидаемую роль корейской стороны. Мы помогаем структурировать информацию для корейских компаний и организуем взаимодействие с заинтересованными сторонами."
   },
   "submitProject": {
-    "en": "Discuss a project",
+    "en": "Introduce a project",
     "ko": "프로젝트 논의",
-    "ru": "Обсудить проект"
+    "ru": "Представить проект"
   },
   "tj": {
     "en": "Tajikistan",
@@ -913,5 +913,31 @@
     "en": "See all directions →",
     "ko": "모든 사업 분야 보기 →",
     "ru": "Все направления →"
+  },
+  "cooperationProcessHeading": {
+    "ru": "Порядок взаимодействия",
+    "en": "How cooperation works"
+  },
+  "cooperationTerms": {
+    "ru": "Первичное обращение и знакомство с проектом не создают обязательств для сторон. Не направляйте конфиденциальные документы при первом обращении: порядок обмена такой информацией согласуется отдельно.",
+    "en": "An initial enquiry and project introduction create no obligations for either side. Please do not send confidential documents with a first enquiry; the exchange of such information is agreed separately."
+  },
+  "contactSubtitle": {
+    "ru": "От первого обращения — к согласованным условиям.",
+    "en": "From first enquiry to agreed terms."
+  },
+  "cooperationSteps": {
+    "ru": [
+      "Обращение — через форму или по электронной почте.",
+      "Уточнение интереса — цели, роль и ожидания сторон.",
+      "Информация о проекте — структурированный профиль и перечень открытых вопросов.",
+      "Проработка и сопровождение — условия участия, структура сотрудничества и взаимодействие сторон по согласованному объёму работ."
+    ],
+    "en": [
+      "Enquiry — via the form or by email.",
+      "Clarifying interest — goals, roles and expectations of the parties.",
+      "Project information — a structured profile and a list of open questions.",
+      "Development and support — participation terms, cooperation structure and interaction between the parties within an agreed scope of work."
+    ]
   }
 }

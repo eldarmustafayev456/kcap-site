@@ -51,10 +51,10 @@ def homepage(l):
 def catalogue(l):
  def select(key,options):return f'<label>{e(t(key,l))}<select id="filter-{key}" name="{key}">'+''.join(f'<option value="{v}">{e(text)}</option>' for v,text in options)+'</select></label>'
  filters=f'<label>{e(t("search",l))}<input id="filter-search" type="search" placeholder="{e(t("searchHint",l))}" autocomplete="off"></label>'
- filters+=select('country',[('all',t('allCountries',l))]+[(k,t(k,l)) for k in ('kg','uz','kz','tj','tm')])
- filters+=select('sector',[('all',t('allSectors',l))]+[(s['key'],s['title'][l]) for s in SECTORS])
- filters+=select('stage',[('all',t('allStages',l))]+[(k,t(k,l)) for k in ('concept','discussion','preparation')])
- return intro('projects',l,'catalogueCopy')+section('<form class="filters" id="filters" role="search">'+filters+'</form><div class="results" id="results" aria-live="polite" data-label="'+e(t('entries',l))+'">'+e(t('entries',l))+': 8</div><p class="no-results" id="empty" hidden>'+e(t('empty',l))+'</p><div class="project-list catalogue-list" id="catalogue">'+''.join(projectcard(p,l) for p in PROJECTS)+'</div>'+note('sourceNote',l))
+ filters+=select('country',[('all',t('allCountries',l))]+[(k,t(k,l)) for k in sorted({p['country'] for p in PROJECTS})])
+ filters+=select('sector',[('all',t('allSectors',l))]+[(s['key'],s['title'][l]) for s in SECTORS if s['key'] in {p['sector'] for p in PROJECTS}])
+ filters+=select('stage',[('all',t('allStages',l))]+[(k,t(k,l)) for k in sorted({p['stage'] for p in PROJECTS})])
+ return intro('projects',l,'catalogueCopy')+section('<form class="filters" id="filters" role="search">'+filters+'</form><div class="results" id="results" aria-live="polite" data-label="'+e(t('entries',l))+'">'+e(t('entries',l))+': '+str(len(PROJECTS))+'</div><p class="no-results" id="empty" hidden>'+e(t('empty',l))+'</p><div class="project-list catalogue-list" id="catalogue">'+''.join(projectcard(p,l) for p in PROJECTS)+'</div>'+note('sourceNote',l))
 def detail(p,l):
  facts=[('projectID',p['id']),('country',t(p['country'],l)),('location',p['location'][l]),('sector',t(p['sector'],l)),('stage',t(p['stage'],l))]
  if p.get('updated_at'):facts.append(('updated',p['updated_at']))
@@ -67,10 +67,19 @@ def article(n,l):
 def contact(l):
  labels={'en':('Prepare an email','This opens your email app. The message is sent only after you send it there.'),'ko':('이메일 작성','이메일 앱이 열립니다. 앱에서 전송을 완료해야 문의가 전달됩니다.'),'ru':('Подготовить письмо','Откроется ваша почтовая программа. Письмо отправляется только после отправки в ней.')}
  def field(k,typ='text'):return '<label><span>'+e(t(k,l))+'</span><input name="'+k+'" type="'+typ+'" required maxlength="200" autocomplete="'+({'name':'name','organisation':'organization','email':'email'}[k])+'"></label>'
- return intro('contact',l,'contactCopy')+section('<div class="contact-layout"><aside><div class="official-contacts"><div><label>'+e(t('general',l))+'</label><a href="mailto:info@koreacentralasia.com">info@koreacentralasia.com</a></div><div><label>'+e(t('projectInterest',l))+'</label><a href="mailto:project@koreacentralasia.com">project@koreacentralasia.com</a></div></div><p>'+e(t('contactAside',l))+'</p>'+note('noSensitive',l)+'</aside><form id="enquiry" data-language="'+l+'"><input name="project_id" type="hidden"><div class="form-grid">'+field('name')+field('organisation')+field('email','email')+'<label class="full">'+e(t('interest',l))+'<select name="topic"><option value="general">'+e(t('general',l))+'</option><option value="project">'+e(t('projectInterest',l))+'</option></select></label><label class="full">'+e(t('message',l))+'<textarea name="message" required maxlength="5000"></textarea></label></div><div class="form-footer"><button class="action" type="submit">'+e(labels[l][0])+' ↗</button></div><p class="note">'+e(labels[l][1])+'</p><div class="form-status" id="form-status" role="status"></div></form></div>')
+ contact_intro=intro('contact',l,'contactCopy')
+ if l in COPY.get('contactSubtitle',{}):
+  contact_intro=intro('contact',l)+section('<h2>'+e(t('contactSubtitle',l))+'</h2><p>'+e(t('contactCopy',l))+'</p>','page-intro')
+ return contact_intro+section('<div class="contact-layout"><aside><div class="official-contacts"><div><label>'+e(t('general',l))+'</label><a href="mailto:info@koreacentralasia.com">info@koreacentralasia.com</a></div><div><label>'+e(t('projectInterest',l))+'</label><a href="mailto:project@koreacentralasia.com">project@koreacentralasia.com</a></div></div><p>'+e(t('contactAside',l))+'</p>'+note('noSensitive',l)+'</aside><form id="enquiry" data-language="'+l+'"><input name="project_id" type="hidden"><div class="form-grid">'+field('name')+field('organisation')+field('email','email')+'<label class="full">'+e(t('interest',l))+'<select name="topic"><option value="general">'+e(t('general',l))+'</option><option value="project">'+e(t('projectInterest',l))+'</option></select></label><label class="full">'+e(t('message',l))+'<textarea name="message" required maxlength="5000"></textarea></label></div><div class="form-footer"><button class="action" type="submit">'+e(labels[l][0])+' ↗</button></div><p class="note">'+e(labels[l][1])+'</p><div class="form-status" id="form-status" role="status"></div></form></div>')
 def info(l,key):
  if key=='about':return intro('about',l,'aboutCopy')+section('<div class="audience-grid">'+''.join('<article><h2>'+e(t(k,l))+'</h2><p>'+e(t(k+'Copy',l))+'</p></article>' for k in ('businessPlatform','projectConsulting','advisory'))+'</div><h2 class="spaced">'+e(t('regionalApproach',l))+'</h2><p>'+e(t('geographyCopy',l))+'</p>')
- if key=='cooperation':return intro(key,l,'cooperationIntro')+section(note('cooperationPending',l))+section('<div class="audience-grid">'+''.join('<article><h2>'+e(t(k,l))+'</h2><p class="spaced">'+e(t(k+'Copy',l))+'</p>'+link(action,l,'contact','action')+'</article>' for k,action in [('forKorea','companyInterest'),('forSponsors','submitProject')])+'</div>')+section(link('seeDirections',l,'directions'))
+ if key=='cooperation':
+  pending=section(note('cooperationPending',l)) if l=='ko' else ''
+  audiences=section('<div class="audience-grid">'+''.join('<article><h2>'+e(t(k,l))+'</h2><p class="spaced">'+e(t(k+'Copy',l))+'</p>'+a(t(action,l),url(l,'contact')+'?topic='+('project' if k=='forSponsors' else 'general'),'action')+'</article>' for k,action in [('forKorea','companyInterest'),('forSponsors','submitProject')])+'</div>')
+  interaction=''
+  if l in COPY.get('cooperationSteps',{}):
+   interaction=section('<h2>'+e(t('cooperationProcessHeading',l))+'</h2><ol class="cooperation-steps">'+''.join('<li>'+e(step)+'</li>' for step in COPY['cooperationSteps'][l])+'</ol><p>'+e(t('cooperationTerms',l))+'</p>')
+  return intro(key,l,'cooperationIntro')+pending+audiences+interaction+section(link('seeDirections',l,'directions'))
  if key=='directions':return intro(key,l,'directionsCopy')+section(sectors(l))
  if key=='news':return intro(key,l,'newsCopy')+section('<div class="news-list news-index">'+''.join(newscard(n,l) for n in NEWS)+'</div>')
  if key=='privacy':return intro(key,l)+section('<p>'+e(t('privacyPending',l))+'</p>')
