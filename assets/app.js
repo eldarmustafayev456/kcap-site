@@ -1,4 +1,5 @@
 'use strict';
+function syncLanguageContext(){document.querySelectorAll('.languages a').forEach(link=>{link.href=link.href.split('?')[0]+location.search;});}
 const filters=document.querySelector('#filters');
 if(filters){
  const controls=['search','country','sector','stage'].map(k=>document.querySelector('#filter-'+k));
@@ -10,19 +11,19 @@ if(filters){
    row.hidden=!(row.dataset.search.toLocaleLowerCase().includes(search.trim().toLocaleLowerCase()) && (country==='all'||row.dataset.country===country) && (sector==='all'||row.dataset.sector===sector) && (stage==='all'||row.dataset.stage===stage));if(!row.hidden)count++;
   });
   const results=document.querySelector('#results');results.textContent=results.dataset.label+': '+count;document.querySelector('#empty').hidden=count!==0;
-  if(update){const params=new URLSearchParams();controls.forEach(c=>{if(c.value&&c.value!=='all')params.set(c.id.replace('filter-',''),c.value);});history.replaceState(null,'',location.pathname+(params.size?'?'+params:''));}
+  if(update){const params=new URLSearchParams();controls.forEach(c=>{if(c.value&&c.value!=='all')params.set(c.id.replace('filter-',''),c.value);});history.replaceState(null,'',location.pathname+(params.size?'?'+params:''));syncLanguageContext();}
  }
  filters.addEventListener('submit',event=>event.preventDefault());controls.forEach(c=>c.addEventListener(c.type==='search'?'input':'change',()=>filter()));filter(false);
 }
 // Keep filter and enquiry context when switching languages; record paths already match.
-document.querySelectorAll('.languages a').forEach(link=>{link.href+=location.search;});
+syncLanguageContext();
 const enquiry=document.querySelector('#enquiry');
 if(enquiry){
  const parameters=new URLSearchParams(location.search);
  let project=parameters.get('project')||'';
  const previousPrefix=String.fromCharCode(83,67,65,66,71,45);
  const routeAliases={"kg-bat-002": "kcap-kg-001", "kg-isk-001": "kcap-kg-002", "kg-chu-001": "kcap-kg-003", "kg-tal-001": "kcap-kg-004", "uz-krk-704": "kcap-uz-001", "uz-krk-283": "kcap-uz-002", "uz-krk-284": "kcap-uz-003", "uz-krk-235": "kcap-uz-004"};
- if(project.toUpperCase().startsWith(previousPrefix)){const alias=routeAliases[project.slice(previousPrefix.length).toLowerCase()];project=alias?alias.toUpperCase():'';if(project)parameters.set('project',project);else parameters.delete('project');history.replaceState(null,'',location.pathname+(parameters.size?'?'+parameters:''));}
+ if(project.toUpperCase().startsWith(previousPrefix)){const alias=routeAliases[project.slice(previousPrefix.length).toLowerCase()];project=alias?alias.toUpperCase():'';if(project)parameters.set('project',project);else parameters.delete('project');history.replaceState(null,'',location.pathname+(parameters.size?'?'+parameters:''));syncLanguageContext();}
 
  enquiry.elements.project_id.value=project;if(project){enquiry.elements.topic.value='project';enquiry.elements.message.value=project+' — ';}
  enquiry.addEventListener('submit',event=>{
