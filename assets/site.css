@@ -65,3 +65,5 @@ html{background:#d4e2df;scroll-behavior:smooth}body{margin:0}#kcap .viewport{max
 @container(max-width:700px){#kcap .corridor{grid-template-columns:1fr}#kcap .cities{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 .cooperation-steps{padding-left:1.5rem;margin:1.5rem 0 2rem}.cooperation-steps li{padding-left:.4rem;margin:0 0 1rem;line-height:1.65}
+
+.demo-notice{padding:.65rem 1.5rem;background:var(--navy,#102e50);color:#fff;text-align:center;font-size:.75rem;letter-spacing:.08em}

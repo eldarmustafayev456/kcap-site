@@ -22,9 +22,6 @@ if(enquiry){
  const parameters=new URLSearchParams(location.search);
  if(parameters.get('topic')==='project')enquiry.elements.topic.value='project';
  let project=parameters.get('project')||'';
- const previousPrefix=String.fromCharCode(83,67,65,66,71,45);
- const routeAliases={"kg-bat-002": "kcap-kg-001", "kg-isk-001": "kcap-kg-002", "kg-chu-001": "kcap-kg-003", "kg-tal-001": "kcap-kg-004", "uz-krk-704": "kcap-uz-001", "uz-krk-283": "kcap-uz-002", "uz-krk-284": "kcap-uz-003", "uz-krk-235": "kcap-uz-004"};
- if(project.toUpperCase().startsWith(previousPrefix)){const alias=routeAliases[project.slice(previousPrefix.length).toLowerCase()];project=alias?alias.toUpperCase():'';if(project)parameters.set('project',project);else parameters.delete('project');history.replaceState(null,'',location.pathname+(parameters.size?'?'+parameters:''));syncLanguageContext();}
 
  enquiry.elements.project_id.value=project;if(project){enquiry.elements.topic.value='project';enquiry.elements.message.value=project+' — ';}
  enquiry.addEventListener('submit',event=>{

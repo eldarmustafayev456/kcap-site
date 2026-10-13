@@ -684,11 +684,6 @@
     "ko": "기업의 지역 관심 또는 특정 중앙아시아 프로젝트에서 대화를 시작할 수 있습니다.",
     "ru": "KCAP работает с двумя сторонами: корейскими компаниями и инициаторами проектов в Центральной Азии. Сотрудничество может начаться с интереса к региону или с конкретного проекта."
   },
-  "cooperationStatus": {
-    "en": "Content proposal. The full wording requires approval.",
-    "ko": "콘텐츠 제안입니다. 전체 문구는 승인이 필요합니다.",
-    "ru": "Предложение по содержанию. Полный текст раздела требует согласования."
-  },
   "forKorea": {
     "en": "For Korean companies",
     "ko": "지역 기회 논의",
@@ -773,11 +768,6 @@
     "en": "Cooperation format",
     "ko": "협력 방식",
     "ru": "Формат сотрудничества"
-  },
-  "koreanRole": {
-    "en": "Expected role of the Korean side",
-    "ko": "한국 측의 예상 역할",
-    "ru": "Предполагаемая роль корейской стороны"
   },
   "updated": {
     "en": "Last updated",
@@ -899,16 +889,6 @@
     "ko": "KCAP 검토일",
     "ru": "Рассмотрено KCAP"
   },
-  "rolePending": {
-    "en": "Wording pending approval.",
-    "ko": "문구 승인 대기 중.",
-    "ru": "Формулировка — на согласовании."
-  },
-  "cooperationPending": {
-    "en": "Section wording pending approval.",
-    "ko": "섹션 문구 승인 대기 중.",
-    "ru": "Текст раздела — на согласовании."
-  },
   "seeDirections": {
     "en": "See all directions →",
     "ko": "모든 사업 분야 보기 →",
@@ -939,5 +919,10 @@
       "Project information — a structured profile and a list of open questions.",
       "Development and support — participation terms, cooperation structure and interaction between the parties within an agreed scope of work."
     ]
+  },
+  "demoNotice": {
+    "en": "Demo version",
+    "ko": "데모 버전",
+    "ru": "Демо-версия"
   }
 }

@@ -74,12 +74,11 @@ def contact(l):
 def info(l,key):
  if key=='about':return intro('about',l,'aboutCopy')+section('<div class="audience-grid">'+''.join('<article><h2>'+e(t(k,l))+'</h2><p>'+e(t(k+'Copy',l))+'</p></article>' for k in ('businessPlatform','projectConsulting','advisory'))+'</div><h2 class="spaced">'+e(t('regionalApproach',l))+'</h2><p>'+e(t('geographyCopy',l))+'</p>')
  if key=='cooperation':
-  pending=section(note('cooperationPending',l)) if l=='ko' else ''
   audiences=section('<div class="audience-grid">'+''.join('<article><h2>'+e(t(k,l))+'</h2><p class="spaced">'+e(t(k+'Copy',l))+'</p>'+a(t(action,l),url(l,'contact')+'?topic='+('project' if k=='forSponsors' else 'general'),'action')+'</article>' for k,action in [('forKorea','companyInterest'),('forSponsors','submitProject')])+'</div>')
   interaction=''
   if l in COPY.get('cooperationSteps',{}):
    interaction=section('<h2>'+e(t('cooperationProcessHeading',l))+'</h2><ol class="cooperation-steps">'+''.join('<li>'+e(step)+'</li>' for step in COPY['cooperationSteps'][l])+'</ol><p>'+e(t('cooperationTerms',l))+'</p>')
-  return intro(key,l,'cooperationIntro')+pending+audiences+interaction+section(link('seeDirections',l,'directions'))
+  return intro(key,l,'cooperationIntro')+audiences+interaction+section(link('seeDirections',l,'directions'))
  if key=='directions':return intro(key,l,'directionsCopy')+section(sectors(l))
  if key=='news':return intro(key,l,'newsCopy')+section('<div class="news-list news-index">'+''.join(newscard(n,l) for n in NEWS)+'</div>')
  if key=='privacy':return intro(key,l)+section('<p>'+e(t('privacyPending',l))+'</p>')
@@ -88,7 +87,7 @@ def info(l,key):
 def render(l,path,body,title,description,kind=''):
  nav='<nav aria-label="'+e({'en':'Main navigation','ko':'주 메뉴','ru':'Основная навигация'}[l])+'">'+''.join(f'<a {"aria-current=page" if path==p or path.startswith(p+"/") and p else ""} href="{url(l,p)}">{e(t(k,l))}</a>' for k,p in [('home',''),('about','about'),('projects','projects'),('cooperation','cooperation'),('news','news'),('contact','contact')])+'</nav>'
  langs='<div class="languages">'+''.join(f'<a hreflang="{x}" lang="{x}" {"aria-current=page" if x==l else ""} href="{url(x,path)}">{label}</a>' for x,label in [('en','EN'),('ko','한국어'),('ru','RU')])+'</div>'
- header=f'<header><a class="brand" href="{url(l)}"><img src="{img("KCAP_horizontal_color.svg")}" alt="KCAP — Business Gateway Platform" width="210" height="45"></a>{nav}{langs}</header>'
+ header=f'<div class="demo-notice" role="note">{e(t("demoNotice",l))}</div><header><a class="brand" href="{url(l)}"><img src="{img("KCAP_horizontal_color.svg")}" alt="KCAP — Business Gateway Platform" width="210" height="45"></a>{nav}{langs}</header>'
  footer=f'<footer><a href="{url(l)}"><img src="{img("KCAP_horizontal_white.svg")}" alt="KCAP — Business Gateway Platform" width="150" height="32"></a><div class="footer-links">{link("privacy",l,"privacy","")}{link("legalNotice",l,"legal-notice","")}</div></footer>'
  band=section('<h2>'+e(t('start',l))+'</h2>'+link('talk',l,'contact','action'),'contact-band') if path!='contact' else ''
  seo=f'<meta name="robots" content="{"index,follow" if PUBLIC and path not in ("privacy","legal-notice") else "noindex,nofollow"}">'
