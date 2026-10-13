@@ -1,6 +1,5 @@
 [
   {
-    "source_id": "SCABG-KG-BAT-002",
     "featured": true,
     "title": {
       "ru": "Agroplast — производство томатной пасты",
@@ -23,23 +22,20 @@
       "ko": "생산 시설 3,500m²; 부지 1ha; 농축액 고형분 38–40%."
     },
     "participation": {
-      "ru": "Технология концентрирования и контроля качества; оборудование для переработки и упаковки. Условия участия корейских компаний требуют уточнения.",
-      "en": "Concentration and quality-control technology; processing and packaging equipment. Korean participation terms require clarification.",
-      "ko": "농축 및 품질관리 기술, 가공·포장 장비. 한국 기업의 참여 조건은 확인이 필요합니다."
+      "ru": "Технология концентрирования и контроля качества; оборудование для переработки и упаковки.",
+      "en": "Concentration and quality-control technology; processing and packaging equipment.",
+      "ko": "농축 및 품질관리 기술, 가공·포장 장비."
     },
-    "id": "SCABG-KG-BAT-002",
-    "slug": "scabg-kg-bat-002",
+    "id": "KCAP-KG-001",
+    "slug": "kcap-kg-001",
     "country": "kg",
     "sector": "agri_food",
     "stage": "concept",
-    "source_url": "https://www.spaincentralasia.com/projects/scabg-kg-bat-002",
-    "source_stage": "concept",
-    "source_updated_at": null,
-    "source_checked_at": "2026-10-13",
-    "publication_status": "published"
+    "publication_status": "published",
+    "reviewed_at": "2026-10-13",
+    "updated_at": null
   },
   {
-    "source_id": "SCABG-KG-ISK-001",
     "featured": true,
     "title": {
       "ru": "Ветроэлектростанция Топурак-Бел",
@@ -62,23 +58,20 @@
       "ko": "계획 용량 60MW. 공개 프로필에 사업비는 제시되지 않았습니다."
     },
     "participation": {
-      "ru": "Конфигурация ветропарка, турбины и электрические системы. Формат участия и текущая доступность проекта уточняются.",
-      "en": "Wind-farm configuration, turbines and electrical systems. Participation structure and availability require clarification.",
-      "ko": "풍력단지 구성, 터빈 및 전기 시스템. 참여 방식과 현재 가능 여부는 확인이 필요합니다."
+      "ru": "Конфигурация ветропарка, турбины и электрические системы.",
+      "en": "Wind-farm configuration, turbines and electrical systems.",
+      "ko": "풍력단지 구성, 터빈 및 전기 시스템."
     },
-    "id": "SCABG-KG-ISK-001",
-    "slug": "scabg-kg-isk-001",
+    "id": "KCAP-KG-002",
+    "slug": "kcap-kg-002",
     "country": "kg",
     "sector": "energy",
     "stage": "concept",
-    "source_url": "https://www.spaincentralasia.com/projects/scabg-kg-isk-001",
-    "source_stage": "concept",
-    "source_updated_at": null,
-    "source_checked_at": "2026-10-13",
-    "publication_status": "published"
+    "publication_status": "published",
+    "reviewed_at": "2026-10-13",
+    "updated_at": null
   },
   {
-    "source_id": "SCABG-KG-CHU-001",
     "featured": false,
     "title": {
       "ru": "Расширение горнолыжной базы ZiL",
@@ -101,23 +94,20 @@
       "ko": "사업 설명서 기준 비용 660만 달러; 계획 케이블카 길이 5km."
     },
     "participation": {
-      "ru": "Канатная дорога, системы управления, инженерные работы и сопутствующая инфраструктура. Объём участия требует согласования.",
-      "en": "Cableway equipment, control systems, engineering and supporting infrastructure. Participation scope requires agreement.",
-      "ko": "케이블카 장비, 제어 시스템, 엔지니어링 및 부대 인프라. 참여 범위는 협의가 필요합니다."
+      "ru": "Канатная дорога, системы управления, инженерные работы и сопутствующая инфраструктура.",
+      "en": "Cableway equipment, control systems, engineering and supporting infrastructure.",
+      "ko": "케이블카 장비, 제어 시스템, 엔지니어링 및 부대 인프라."
     },
-    "id": "SCABG-KG-CHU-001",
-    "slug": "scabg-kg-chu-001",
+    "id": "KCAP-KG-003",
+    "slug": "kcap-kg-003",
     "country": "kg",
     "sector": "hospitality",
     "stage": "concept",
-    "source_url": "https://www.spaincentralasia.com/projects/scabg-kg-chu-001",
-    "source_stage": "concept",
-    "source_updated_at": null,
-    "source_checked_at": "2026-10-13",
-    "publication_status": "published"
+    "publication_status": "published",
+    "reviewed_at": "2026-10-13",
+    "updated_at": null
   },
   {
-    "source_id": "SCABG-KG-TAL-001",
     "featured": false,
     "title": {
       "ru": "Autoborgenik Service — логистический центр",
@@ -140,23 +130,20 @@
       "ko": "계획 저장 용량 최대 10,000톤; 부지 3.5ha."
     },
     "participation": {
-      "ru": "Проектирование хранения, температурный контроль, холодильные системы и контейнерное оборудование. Условия участия уточняются.",
-      "en": "Storage design, temperature control, refrigeration and container-handling equipment. Participation terms require clarification.",
-      "ko": "저장시설 설계, 온도 제어, 냉장 시스템 및 컨테이너 취급 장비. 참여 조건은 확인이 필요합니다."
+      "ru": "Проектирование хранения, температурный контроль, холодильные системы и контейнерное оборудование.",
+      "en": "Storage design, temperature control, refrigeration and container-handling equipment.",
+      "ko": "저장시설 설계, 온도 제어, 냉장 시스템 및 컨테이너 취급 장비."
     },
-    "id": "SCABG-KG-TAL-001",
-    "slug": "scabg-kg-tal-001",
+    "id": "KCAP-KG-004",
+    "slug": "kcap-kg-004",
     "country": "kg",
     "sector": "transport_logistics",
     "stage": "concept",
-    "source_url": "https://www.spaincentralasia.com/projects/scabg-kg-tal-001",
-    "source_stage": "concept",
-    "source_updated_at": null,
-    "source_checked_at": "2026-10-13",
-    "publication_status": "published"
+    "publication_status": "published",
+    "reviewed_at": "2026-10-13",
+    "updated_at": null
   },
   {
-    "source_id": "SCABG-UZ-KRK-704",
     "featured": true,
     "title": {
       "ru": "Karakalpak Basaltwool — теплоизоляционные материалы",
@@ -179,9 +166,9 @@
       "ko": "출처 기준 총 사업비 6,700만 달러; 용량 최대 연 50,000톤. 해당 금액의 자금 조달 요청을 의미하지 않습니다."
     },
     "participation": {
-      "ru": "Системы качества, международная сертификация, технические испытания и развитие экспортных рынков. Конкретная роль корейской стороны требует согласования.",
-      "en": "Quality systems, international certification, technical testing and export-market development. The Korean-side role requires agreement.",
-      "ko": "품질 시스템, 국제 인증, 기술 시험 및 수출시장 개발. 한국 측의 구체적 역할은 협의가 필요합니다."
+      "ru": "Системы качества, международная сертификация, технические испытания и развитие экспортных рынков.",
+      "en": "Quality systems, international certification, technical testing and export-market development.",
+      "ko": "품질 시스템, 국제 인증, 기술 시험 및 수출시장 개발."
     },
     "asset_status": "operating",
     "stage_note": {
@@ -189,19 +176,16 @@
       "en": "Source catalogue stage: cooperation concept; the plant itself is operating.",
       "ko": "출처 카탈로그 단계는 협력 구상이며 공장 자체는 운영 중입니다."
     },
-    "id": "SCABG-UZ-KRK-704",
-    "slug": "scabg-uz-krk-704",
+    "id": "KCAP-UZ-001",
+    "slug": "kcap-uz-001",
     "country": "uz",
     "sector": "industry",
     "stage": "concept",
-    "source_url": "https://www.spaincentralasia.com/projects/scabg-uz-krk-704",
-    "source_stage": "concept",
-    "source_updated_at": null,
-    "source_checked_at": "2026-10-13",
-    "publication_status": "published"
+    "publication_status": "published",
+    "reviewed_at": "2026-10-13",
+    "updated_at": null
   },
   {
-    "source_id": "SCABG-UZ-KRK-283",
     "featured": true,
     "title": {
       "ru": "Производство медицинских перчаток — Нукус",
@@ -224,23 +208,20 @@
       "ko": "출처 기준 비용 170만 달러; 계획 생산량 연 300만 개."
     },
     "participation": {
-      "ru": "Производственные линии медицинских расходных материалов и технологии контроля качества. Параметры и формат участия требуют уточнения.",
-      "en": "Medical-consumable production lines and quality-control technology. Parameters and participation terms require clarification.",
-      "ko": "의료 소모품 생산라인 및 품질관리 기술. 세부 조건과 참여 방식은 확인이 필요합니다."
+      "ru": "Производственные линии медицинских расходных материалов и технологии контроля качества.",
+      "en": "Medical-consumable production lines and quality-control technology.",
+      "ko": "의료 소모품 생산라인 및 품질관리 기술."
     },
-    "id": "SCABG-UZ-KRK-283",
-    "slug": "scabg-uz-krk-283",
+    "id": "KCAP-UZ-002",
+    "slug": "kcap-uz-002",
     "country": "uz",
     "sector": "health",
     "stage": "concept",
-    "source_url": "https://www.spaincentralasia.com/projects/scabg-uz-krk-283",
-    "source_stage": "concept",
-    "source_updated_at": null,
-    "source_checked_at": "2026-10-13",
-    "publication_status": "published"
+    "publication_status": "published",
+    "reviewed_at": "2026-10-13",
+    "updated_at": null
   },
   {
-    "source_id": "SCABG-UZ-KRK-284",
     "featured": false,
     "title": {
       "ru": "Переработка макулатуры и производство картона — Нукус",
@@ -263,23 +244,20 @@
       "ko": "출처 기준 비용 120만 달러; 계획 용량 연 3,000톤."
     },
     "participation": {
-      "ru": "Технологии производства бумаги и перерабатывающие линии. Условия международного участия уточняются.",
-      "en": "Paper-production technology and processing lines. International participation terms require clarification.",
-      "ko": "종이 생산 기술 및 가공라인. 국제 참여 조건은 확인이 필요합니다."
+      "ru": "Технологии производства бумаги и перерабатывающие линии.",
+      "en": "Paper-production technology and processing lines.",
+      "ko": "종이 생산 기술 및 가공라인."
     },
-    "id": "SCABG-UZ-KRK-284",
-    "slug": "scabg-uz-krk-284",
+    "id": "KCAP-UZ-003",
+    "slug": "kcap-uz-003",
     "country": "uz",
     "sector": "environment",
     "stage": "concept",
-    "source_url": "https://www.spaincentralasia.com/projects/scabg-uz-krk-284",
-    "source_stage": "concept",
-    "source_updated_at": null,
-    "source_checked_at": "2026-10-13",
-    "publication_status": "published"
+    "publication_status": "published",
+    "reviewed_at": "2026-10-13",
+    "updated_at": null
   },
   {
-    "source_id": "SCABG-UZ-KRK-235",
     "featured": false,
     "title": {
       "ru": "Солнечные и электрические водонагреватели — Канлыкуль",
@@ -302,19 +280,17 @@
       "ko": "출처 기준 비용 75만 달러; 계획 생산량 연 5,500개."
     },
     "participation": {
-      "ru": "Технологии сборки и испытаний водонагревателей, производственное оборудование. Формат участия корейских компаний требует уточнения.",
-      "en": "Water-heater assembly and testing technology, with production equipment. Korean-company participation terms require clarification.",
-      "ko": "온수기 조립·시험 기술 및 생산 장비. 한국 기업의 참여 조건은 확인이 필요합니다."
+      "ru": "Технологии сборки и испытаний водонагревателей, производственное оборудование.",
+      "en": "Water-heater assembly and testing technology, with production equipment.",
+      "ko": "온수기 조립·시험 기술 및 생산 장비."
     },
-    "id": "SCABG-UZ-KRK-235",
-    "slug": "scabg-uz-krk-235",
+    "id": "KCAP-UZ-004",
+    "slug": "kcap-uz-004",
     "country": "uz",
     "sector": "energy",
     "stage": "concept",
-    "source_url": "https://www.spaincentralasia.com/projects/scabg-uz-krk-235",
-    "source_stage": "concept",
-    "source_updated_at": null,
-    "source_checked_at": "2026-10-13",
-    "publication_status": "published"
+    "publication_status": "published",
+    "reviewed_at": "2026-10-13",
+    "updated_at": null
   }
 ]

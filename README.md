@@ -33,7 +33,7 @@ Korean review and public launch were confirmed by the user on October 13, 2026. 
 
 ## Current content
 
-8 source-based projects: 4 Kyrgyzstan, 4 Uzbekistan. Project source links and source IDs are retained. Financial figures remain source-stated values, not financing requests. Stages are not invented to diversify filters.
+8 source-based projects: 4 Kyrgyzstan, 4 Uzbekistan. Projects use KCAP IDs. Original references are held separately for internal records. Financial figures remain source-stated values, not financing requests. Stages are not invented to diversify filters.
 
 9 sectors and 3 news articles. The June 15, 2026 Uzbekistan–Korea forum article uses the photo provided for KCAP. KTI is described as a forum organizer, not a KCAP partner.
 

@@ -65,9 +65,9 @@
     "ru": "Один маршрут,"
   },
   "corridor2": {
-    "en": "four local times.",
-    "ko": "네 도시의 비즈니스 시간.",
-    "ru": "четыре деловых ритма."
+    "en": "six local times.",
+    "ko": "여섯 도시의 현지 시간.",
+    "ru": "шесть местных времён."
   },
   "seoul": {
     "en": "Seoul",
@@ -344,11 +344,6 @@
     "ko": "프로젝트 개요",
     "ru": "О проекте"
   },
-  "detailCopy": {
-    "en": "The project description follows its public source. It does not imply a KCAP mandate or an agreed role for Korean companies.",
-    "ko": "프로젝트 설명은 공개 출처를 따릅니다. KCAP의 위임이나 한국 기업의 합의된 역할을 의미하지 않습니다.",
-    "ru": "Описание подготовлено по публичному источнику. Оно не означает наличия мандата KCAP или согласованной роли корейских компаний."
-  },
   "cooperationScope": {
     "en": "Possible cooperation",
     "ko": "협력 가능성",
@@ -478,11 +473,6 @@
     "en": "Tell us about your company, a project or the cooperation you would like to explore.",
     "ko": "기업, 프로젝트 또는 희망하는 협력 내용을 알려주세요.",
     "ru": "Расскажите о компании, проекте или сотрудничестве, которое вы хотели бы обсудить."
-  },
-  "sharedInterest": {
-    "en": "A shared interest. A clear next step.",
-    "ko": "공통의 관심. 명확한 다음 단계.",
-    "ru": "Общий интерес. Понятный следующий шаг."
   },
   "contactAside": {
     "en": "A short introduction helps the team understand your sector, regional interests and the purpose of the conversation.",
@@ -869,21 +859,6 @@
     "ko": "공개 자료에서 검토 대상으로 선정한 기회입니다. 출처의 수치, 현재 가능 여부 및 참여 조건은 확인이 필요합니다.",
     "ru": "Отобранные публичные возможности для рассмотрения. Параметры источника, текущая доступность и условия участия требуют подтверждения."
   },
-  "sourceReference": {
-    "en": "Source reference",
-    "ko": "출처 참조",
-    "ru": "ID источника"
-  },
-  "sourceLabel": {
-    "en": "Public project profile",
-    "ko": "공개 프로젝트 프로필",
-    "ru": "Публичная карточка источника"
-  },
-  "sourceReviewed": {
-    "en": "Source reviewed",
-    "ko": "출처 확인일",
-    "ru": "Источник просмотрен"
-  },
   "sourceDate": {
     "en": "Source publication date",
     "ko": "출처 게시일",
@@ -913,5 +888,30 @@
     "en": "Regional developments",
     "ko": "지역 동향",
     "ru": "События региона"
+  },
+  "projectID": {
+    "en": "Project ID",
+    "ko": "프로젝트 ID",
+    "ru": "ID проекта"
+  },
+  "reviewed": {
+    "en": "Reviewed by KCAP",
+    "ko": "KCAP 검토일",
+    "ru": "Рассмотрено KCAP"
+  },
+  "rolePending": {
+    "en": "Wording pending approval.",
+    "ko": "문구 승인 대기 중.",
+    "ru": "Формулировка — на согласовании."
+  },
+  "cooperationPending": {
+    "en": "Section wording pending approval.",
+    "ko": "섹션 문구 승인 대기 중.",
+    "ru": "Текст раздела — на согласовании."
+  },
+  "seeDirections": {
+    "en": "See all directions →",
+    "ko": "모든 사업 분야 보기 →",
+    "ru": "Все направления →"
   }
 }
