@@ -194,3 +194,5 @@ html,body{background:#FFFFFF}
  #kcap .project-title h3,#kcap .catalogue-list .project-title h3{font-size:clamp(20px,6vw,23px);hyphens:auto}
  #kcap .news-item .news-copy h3{font-size:26px;hyphens:auto}
 }
+/* Catalogue titles may wrap even when a hyphenation dictionary is unavailable. */
+#kcap .catalogue-list .project-title h3{overflow-wrap:anywhere;hyphens:auto;min-width:0}
