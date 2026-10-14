@@ -172,9 +172,9 @@
     },
     "asset_status": "operating",
     "stage_note": {
-      "ru": "В каталоге источника: концепция сотрудничества; само производство действует.",
-      "en": "Source catalogue stage: cooperation concept; the plant itself is operating.",
-      "ko": "출처 카탈로그 단계는 협력 구상이며 공장 자체는 운영 중입니다."
+      "en": "Cooperation concept; the plant itself is operating.",
+      "ru": "Концепция сотрудничества; само производство действует.",
+      "ko": "협력 구상이며 공장 자체는 운영 중입니다."
     },
     "id": "KCAP-UZ-001",
     "slug": "kcap-uz-001",

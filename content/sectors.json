@@ -1,16 +1,123 @@
 {
-  "status":"adapted_directions_for_KCAP_review",
-  "internal_reference":"https://kheshgrupo.es/sectors",
-  "public_brand":"KCAP",
-  "sectors":[
-    {"key":"health","title":{"ru":"Здравоохранение и социальная инфраструктура","en":"Healthcare & social infrastructure","ko":"의료 및 사회 인프라"},"description":{"ru":"Экстренная медицина, реабилитация, медицинское оборудование и развитие медицинских систем.","en":"Emergency medicine, rehabilitation, medical equipment and healthcare systems.","ko":"응급의료, 재활, 의료장비 및 의료시스템."}},
-    {"key":"institutional","title":{"ru":"Общественная и институциональная инфраструктура","en":"Public & institutional infrastructure","ko":"공공 및 기관 인프라"},"description":{"ru":"Испытания, сертификация, лаборатории, общественные объекты и инфраструктура качества.","en":"Testing, certification, laboratories, public facilities and quality infrastructure.","ko":"시험, 인증, 실험실, 공공시설 및 품질 인프라."}},
-    {"key":"agri_food","title":{"ru":"Сельское хозяйство и пищевая промышленность","en":"Agriculture & food systems","ko":"농업 및 식품산업"},"description":{"ru":"Производство, переработка, агротехнологии и инфраструктура продовольственных цепочек.","en":"Production, processing, agricultural technology and food-chain infrastructure.","ko":"생산, 가공, 농업기술 및 식품 공급망 인프라."}},
-    {"key":"industry","title":{"ru":"Промышленное развитие","en":"Industrial development","ko":"산업 개발"},"description":{"ru":"Промышленные производства, химия, металлургия, материалы и инженерные решения.","en":"Manufacturing, chemicals, metallurgy, materials and engineering solutions.","ko":"제조, 화학, 금속, 소재 및 엔지니어링 솔루션."}},
-    {"key":"hospitality","title":{"ru":"Туризм и гостиничный сектор","en":"Tourism & hospitality","ko":"관광 및 숙박업"},"description":{"ru":"Гостиничные объекты, туристическая инфраструктура и работа с операторами.","en":"Hospitality assets, tourism infrastructure and operator cooperation.","ko":"숙박시설, 관광 인프라 및 운영사 협력."}},
-    {"key":"energy","title":{"ru":"Энергетика","en":"Energy","ko":"에너지"},"description":{"ru":"Генерация, возобновляемая энергия, оборудование и энергоэффективность.","en":"Generation, renewable energy, equipment and energy efficiency.","ko":"발전, 재생에너지, 장비 및 에너지 효율."}},
-    {"key":"environment","title":{"ru":"Вода и экологическая инфраструктура","en":"Water & environmental infrastructure","ko":"수자원 및 환경 인프라"},"description":{"ru":"Водные системы, переработка, отходы и экологические технологии.","en":"Water systems, recycling, waste and environmental technology.","ko":"수자원 시스템, 재활용, 폐기물 및 환경기술."}},
-    {"key":"transport_logistics","title":{"ru":"Транспорт и логистика","en":"Transport & logistics","ko":"교통 및 물류"},"description":{"ru":"Логистические центры, хранение, холодовые цепочки и транспортная инфраструктура.","en":"Logistics centres, storage, cold chains and transport infrastructure.","ko":"물류센터, 저장, 콜드체인 및 교통 인프라."}},
-    {"key":"digital","title":{"ru":"Цифровая инфраструктура и технологии","en":"Digital infrastructure & technology","ko":"디지털 인프라 및 기술"},"description":{"ru":"Цифровые системы, ИИ, автоматизация и технологическое сотрудничество.","en":"Digital systems, AI, automation and technology cooperation.","ko":"디지털 시스템, AI, 자동화 및 기술협력."}}
+  "status": "adapted_directions_for_KCAP_review",
+  "public_brand": "KCAP",
+  "sectors": [
+    {
+      "key": "health",
+      "title": {
+        "ru": "Здравоохранение и социальная инфраструктура",
+        "en": "Healthcare & social infrastructure",
+        "ko": "의료 및 사회 인프라"
+      },
+      "description": {
+        "ru": "Экстренная медицина, реабилитация, медицинское оборудование и развитие медицинских систем.",
+        "en": "Emergency medicine, rehabilitation, medical equipment and healthcare systems.",
+        "ko": "응급의료, 재활, 의료장비 및 의료시스템."
+      }
+    },
+    {
+      "key": "institutional",
+      "title": {
+        "ru": "Общественная и институциональная инфраструктура",
+        "en": "Public & institutional infrastructure",
+        "ko": "공공 및 기관 인프라"
+      },
+      "description": {
+        "ru": "Испытания, сертификация, лаборатории, общественные объекты и инфраструктура качества.",
+        "en": "Testing, certification, laboratories, public facilities and quality infrastructure.",
+        "ko": "시험, 인증, 실험실, 공공시설 및 품질 인프라."
+      }
+    },
+    {
+      "key": "agri_food",
+      "title": {
+        "ru": "Сельское хозяйство и пищевая промышленность",
+        "en": "Agriculture & food systems",
+        "ko": "농업 및 식품산업"
+      },
+      "description": {
+        "ru": "Производство, переработка, агротехнологии и инфраструктура продовольственных цепочек.",
+        "en": "Production, processing, agricultural technology and food-chain infrastructure.",
+        "ko": "생산, 가공, 농업기술 및 식품 공급망 인프라."
+      }
+    },
+    {
+      "key": "industry",
+      "title": {
+        "ru": "Промышленное развитие",
+        "en": "Industrial development",
+        "ko": "산업 개발"
+      },
+      "description": {
+        "ru": "Промышленные производства, химия, металлургия, материалы и инженерные решения.",
+        "en": "Manufacturing, chemicals, metallurgy, materials and engineering solutions.",
+        "ko": "제조, 화학, 금속, 소재 및 엔지니어링 솔루션."
+      }
+    },
+    {
+      "key": "hospitality",
+      "title": {
+        "ru": "Туризм и гостиничный сектор",
+        "en": "Tourism & hospitality",
+        "ko": "관광 및 숙박업"
+      },
+      "description": {
+        "ru": "Гостиничные объекты, туристическая инфраструктура и работа с операторами.",
+        "en": "Hospitality assets, tourism infrastructure and operator cooperation.",
+        "ko": "숙박시설, 관광 인프라 및 운영사 협력."
+      }
+    },
+    {
+      "key": "energy",
+      "title": {
+        "ru": "Энергетика",
+        "en": "Energy",
+        "ko": "에너지"
+      },
+      "description": {
+        "ru": "Генерация, возобновляемая энергия, оборудование и энергоэффективность.",
+        "en": "Generation, renewable energy, equipment and energy efficiency.",
+        "ko": "발전, 재생에너지, 장비 및 에너지 효율."
+      }
+    },
+    {
+      "key": "environment",
+      "title": {
+        "ru": "Вода и экологическая инфраструктура",
+        "en": "Water & environmental infrastructure",
+        "ko": "수자원 및 환경 인프라"
+      },
+      "description": {
+        "ru": "Водные системы, переработка, отходы и экологические технологии.",
+        "en": "Water systems, recycling, waste and environmental technology.",
+        "ko": "수자원 시스템, 재활용, 폐기물 및 환경기술."
+      }
+    },
+    {
+      "key": "transport_logistics",
+      "title": {
+        "ru": "Транспорт и логистика",
+        "en": "Transport & logistics",
+        "ko": "교통 및 물류"
+      },
+      "description": {
+        "ru": "Логистические центры, хранение, холодовые цепочки и транспортная инфраструктура.",
+        "en": "Logistics centres, storage, cold chains and transport infrastructure.",
+        "ko": "물류센터, 저장, 콜드체인 및 교통 인프라."
+      }
+    },
+    {
+      "key": "digital",
+      "title": {
+        "ru": "Цифровая инфраструктура и технологии",
+        "en": "Digital infrastructure & technology",
+        "ko": "디지털 인프라 및 기술"
+      },
+      "description": {
+        "ru": "Цифровые системы, ИИ, автоматизация и технологическое сотрудничество.",
+        "en": "Digital systems, AI, automation and technology cooperation.",
+        "ko": "디지털 시스템, AI, 자동화 및 기술협력."
+      }
+    }
   ]
 }

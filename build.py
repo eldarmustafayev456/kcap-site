@@ -88,7 +88,7 @@ def render(l,path,body,title,description,kind=''):
  header=f'<div class="demo-notice" role="note">{e(t("demoNotice",l))}</div><header><a class="brand" href="{url(l)}"><img src="{img("KCAP_horizontal_color.svg")}" alt="KCAP — Business Gateway Platform" width="210" height="45"></a>{nav}{langs}</header>'
  footer=f'<footer><a href="{url(l)}"><img src="{img("KCAP_horizontal_white.svg")}" alt="KCAP — Business Gateway Platform" width="150" height="32"></a><div class="footer-links">{link("privacy",l,"privacy","")}{link("legalNotice",l,"legal-notice","")}</div></footer>'
  band=section('<h2>'+e(t('start',l))+'</h2>'+a(t('talk',l),url(l,'contact')+('#enquiry' if path=='contact' else ''),'action'),'contact-band')
- labels=[t('platform',l),t('directions',l),t('projects',l),t('news',l),t('contact',l)]
+ labels=[t('processHeading',l),t('directions',l),t('projects',l),t('news',l),t('contact',l)]
  heading_index=0
  def label_heading(match):
   nonlocal heading_index
@@ -100,8 +100,8 @@ def render(l,path,body,title,description,kind=''):
    label=t('projects' if kind=='detail' else 'news' if kind=='article' else 'legalNotice' if path=='legal-notice' else path,l)
   heading_index+=1
   return match.group(0)+f'<span class="section-label" aria-hidden="true">{index:02} · {e(label)}</span>'
- body=re.sub(r'<h2(?:\s[^>]*)?>',label_heading,body)
- band=re.sub(r'<h2(?:\s[^>]*)?>',lambda m:m.group(0)+f'<span class="section-label" aria-hidden="true">{heading_index if not path else heading_index+1:02} · {e(t("contact",l))}</span>',band)
+ if not path:body=re.sub(r'<h2(?:\s[^>]*)?>',label_heading,body)
+ band=re.sub(r'<h2(?:\s[^>]*)?>',lambda m:m.group(0)+f'<span class="section-label" aria-hidden="true">{str(heading_index).zfill(2)+' · ' if not path else ''}{e(t("contact",l))}</span>',band)
  seo=f'<meta name="robots" content="{"index,follow" if PUBLIC and path not in ("privacy","legal-notice") else "noindex,nofollow"}">'
  if ORIGIN:
   seo+=f'<link rel="canonical" href="{e(ORIGIN+url(l,path))}">'+''.join(f'<link rel="alternate" hreflang="{x}" href="{e(ORIGIN+url(x,path))}">' for x in LANGS)+f'<link rel="alternate" hreflang="x-default" href="{e(ORIGIN+url("en",path))}">'

@@ -180,3 +180,17 @@ html,body{background:#FFFFFF}
  #kcap .sector-tile h3,#kcap .lang-ko .sector-tile h3{font:600 12.5px/1.25 Manrope,'Noto Sans KR',sans-serif;letter-spacing:0;hyphens:auto}
  #kcap .sector-tile .eyebrow{font-size:10px;line-height:1.2}
 }
+
+/* Narrow-screen typography remains safe while web fonts load. */
+@container(max-width:700px){
+ #kcap .hero{grid-template-columns:minmax(0,1fr)}
+ #kcap .hero>div{min-width:0}
+ #kcap .hero h1{font-size:clamp(44px,15vw,64px);width:100%;max-width:100%}
+ #kcap .hero h1 .teal{padding-left:clamp(20px,7vw,32px)}
+}
+#kcap .project-title h3,#kcap .news-copy h3{hyphens:auto;word-break:normal;overflow-wrap:normal}
+@container(max-width:399px){
+ #kcap .project-title{gap:10px}
+ #kcap .project-title h3,#kcap .catalogue-list .project-title h3{font-size:clamp(20px,6vw,23px);hyphens:auto}
+ #kcap .news-item .news-copy h3{font-size:26px;hyphens:auto}
+}
