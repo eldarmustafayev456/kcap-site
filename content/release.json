@@ -1,9 +1,12 @@
 {
-  "version": "1.0-rc1",
+  "version": "1.0",
   "korean_review_approved": true,
   "legal_texts_provided": false,
   "form_delivery_connected": false,
   "cms_connected": false,
   "records_selected_for_first_release": true,
-  "approval_basis": "User confirmation, 2026-10-13"
+  "approval_basis": "User authorisation to publish confirmed company and contact details and remove demo label, 2026-11-02",
+  "demo": false,
+  "company_details_confirmed": true,
+  "contact_details_confirmed": true
 }

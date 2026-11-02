@@ -13,6 +13,7 @@ COPY=load('pages');PROJECTS=load('projects');NEWS=load('news');SECTORS=load('sec
 PROJECTS=[p for p in PROJECTS if p.get('publication_status')=='published']
 NEWS=[n for n in NEWS if n.get('publication_status')=='published']
 CONFIG=load('release')
+COMPANY=load('company')
 for sector in SECTORS:COPY[sector['key']]=sector['title']
 if PUBLIC and not CONFIG.get('korean_review_approved'):raise SystemExit('Public release blocked: Korean copy requires Sergey review.')
 def e(v):return html.escape(str(v),quote=True)
@@ -64,11 +65,23 @@ def detail(p,l):
 def article(n,l):
  photo=f'<figure id="article-photo"><img id="article-photo-img" width="960" height="1280" src="{img("uzbekistan-korea-forum-2026.jpg")}" alt="{e(n["caption"][l])}"><figcaption id="article-photo-caption">{e(n["caption"][l])}</figcaption></figure>' if n.get('image_asset') else ''
  return section(link('backNews',l,'news')+'<div class="eyebrow">'+e(t(n['category'],l))+'</div><h1>'+e(n['title'][l])+'</h1><p>'+e(t('eventDate' if n.get('date_kind')=='event' else 'sourceDate',l))+': <time datetime="'+newsdate(n,l)+'">'+newsdate(n,l)+'</time></p>','page-intro')+section('<article class="article-body">'+photo+''.join('<p>'+e(p)+'</p>' for p in n['body'][l])+a(n.get('public_source_label',{}).get(l,t('officialSource',l))+' ↗',n['source_url'],'text-link')+(note('externalNews',l) if not n.get('image_asset') else '')+'</article>')
+def official_details(l,legal=False):
+ labels={
+ 'en':('Company','Business registration number','Corporate registration number','Address','Contact person','Phone','Messengers','Personal data enquiries'),
+ 'ru':('Компания','Регистрационный номер бизнеса','Регистрационный номер юридического лица','Адрес','Контактное лицо','Телефон','Мессенджеры','Вопросы персональных данных'),
+ 'ko':('회사명','사업자등록번호','법인등록번호','주소','담당자','전화','메신저','개인정보 문의')
+ }[l]
+ rows=[(labels[0],COMPANY['name_ko']+' / '+COMPANY['name'] if l=='ko' else COMPANY['name'])]
+ if legal:rows.extend([(labels[1],COMPANY['business_registration']),(labels[2],COMPANY['corporate_registration'])])
+ rows.extend([(labels[3],COMPANY['address'][l]),(labels[4],COMPANY['contact_name'])])
+ if legal:rows.append((labels[7],COMPANY['privacy_contact']+' · '+COMPANY['general_email']))
+ return '<dl class="facts">'+''.join('<div><dt>'+e(k)+'</dt><dd>'+e(v)+'</dd></div>' for k,v in rows)+'</dl><p><strong>'+e(labels[5])+':</strong> '+a(COMPANY['phone'],'tel:+821044144631')+'</p><p><strong>'+e(labels[6])+':</strong> '+e(' · '.join(COMPANY['messengers']))+'</p>'
+
 def contact(l):
  labels={'en':('Prepare an email','This opens your email app. The message is sent only after you send it there.'),'ko':('이메일 작성','이메일 앱이 열립니다. 앱에서 전송을 완료해야 문의가 전달됩니다.'),'ru':('Подготовить письмо','Откроется ваша почтовая программа. Письмо отправляется только после отправки в ней.')}
  def field(k,typ='text'):return '<label><span>'+e(t(k,l))+'</span><input name="'+k+'" type="'+typ+'" required maxlength="200" autocomplete="'+({'name':'name','organisation':'organization','email':'email'}[k])+'"></label>'
  contact_intro=intro('contact',l,'contactCopy','contactSubtitle' if l in COPY.get('contactSubtitle',{}) else None)
- return contact_intro+section('<div class="contact-layout"><aside><div class="official-contacts"><div><label>'+e(t('general',l))+'</label><a href="mailto:info@koreacentralasia.com">info@koreacentralasia.com</a></div><div><label>'+e(t('projectInterest',l))+'</label><a href="mailto:project@koreacentralasia.com">project@koreacentralasia.com</a></div></div><p>'+e(t('contactAside',l))+'</p>'+note('noSensitive',l)+'</aside><form id="enquiry" data-language="'+l+'"><input name="project_id" type="hidden"><div class="form-grid">'+field('name')+field('organisation')+field('email','email')+'<label class="full">'+e(t('interest',l))+'<select name="topic"><option value="general">'+e(t('general',l))+'</option><option value="project">'+e(t('projectInterest',l))+'</option></select></label><label class="full">'+e(t('message',l))+'<textarea name="message" required maxlength="5000"></textarea></label></div><div class="form-footer"><button class="action" type="submit">'+e(labels[l][0])+' ↗</button></div><p class="note">'+e(labels[l][1])+'</p><div class="form-status" id="form-status" role="status"></div></form></div>')
+ return contact_intro+section('<div class="contact-layout"><aside><div class="official-contacts"><div><label>'+e(t('general',l))+'</label><a href="mailto:info@koreacentralasia.com">info@koreacentralasia.com</a></div><div><label>'+e(t('projectInterest',l))+'</label><a href="mailto:project@koreacentralasia.com">project@koreacentralasia.com</a></div></div><p>'+e(t('contactAside',l))+'</p>'+official_details(l)+note('noSensitive',l)+'</aside><form id="enquiry" data-language="'+l+'"><input name="project_id" type="hidden"><div class="form-grid">'+field('name')+field('organisation')+field('email','email')+'<label class="full">'+e(t('interest',l))+'<select name="topic"><option value="general">'+e(t('general',l))+'</option><option value="project">'+e(t('projectInterest',l))+'</option></select></label><label class="full">'+e(t('message',l))+'<textarea name="message" required maxlength="5000"></textarea></label></div><div class="form-footer"><button class="action" type="submit">'+e(labels[l][0])+' ↗</button></div><p class="note">'+e(labels[l][1])+'</p><div class="form-status" id="form-status" role="status"></div></form></div>')
 def info(l,key):
  if key=='about':return intro('about',l,'aboutCopy')+section('<div class="audience-grid">'+''.join('<article><h2>'+e(t(k,l))+'</h2><p>'+e(t(k+'Copy',l))+'</p></article>' for k in ('businessPlatform','projectConsulting','advisory'))+'</div>')+section('<h2>'+e(t('regionalApproach',l))+'</h2><p class="spaced">'+e(t('geographyCopy',l))+'</p>')
  if key=='cooperation':
@@ -80,13 +93,13 @@ def info(l,key):
  if key=='directions':return intro(key,l,'directionsCopy')+section(sectors(l),'section directions-content')
  if key=='news':return intro(key,l,'newsCopy')+section('<div class="news-list news-index">'+''.join(newscard(n,l) for n in NEWS)+'</div>','section news-content-section')
  if key=='privacy':return intro(key,l)+section('<p>'+e(t('privacyPending',l))+'</p>')
- if key=='legal-notice':return intro('legalNotice',l)+section('<p>'+e({'en':'Operator registration details are being prepared. For enquiries: info@koreacentralasia.com.','ko':'운영자 등록 정보를 준비하고 있습니다. 문의: info@koreacentralasia.com.','ru':'Реквизиты оператора готовятся. Для обращений: info@koreacentralasia.com.'}[l])+'</p>')
+ if key=='legal-notice':return intro('legalNotice',l)+section(official_details(l,True)+'<p>'+a(COMPANY['general_email'],'mailto:'+COMPANY['general_email'])+'</p>')
  raise ValueError(key)
 def render(l,path,body,title,description,kind=''):
  nav='<nav aria-label="'+e({'en':'Main navigation','ko':'주 메뉴','ru':'Основная навигация'}[l])+'">'+''.join(f'<a {"aria-current=page" if path==p or path.startswith(p+"/") and p else ""} href="{url(l,p)}">{e(t(k,l))}</a>' for k,p in [('home',''),('about','about'),('projects','projects'),('cooperation','cooperation'),('news','news'),('contact','contact')])+'</nav>'
  langs='<div class="languages">'+''.join(f'<a hreflang="{x}" lang="{x}" {"aria-current=page" if x==l else ""} href="{url(x,path)}">{label}</a>' for x,label in [('en','EN'),('ko','한국어'),('ru','RU')])+'</div>'
- header=f'<div class="demo-notice" role="note">{e(t("demoNotice",l))}</div><header><a class="brand" href="{url(l)}"><img src="{img("KCAP_horizontal_color.svg")}" alt="KCAP — Business Gateway Platform" width="210" height="45"></a>{nav}{langs}</header>'
- footer=f'<footer><a href="{url(l)}"><img src="{img("KCAP_horizontal_white.svg")}" alt="KCAP — Business Gateway Platform" width="150" height="32"></a><div class="footer-links">{link("privacy",l,"privacy","")}{link("legalNotice",l,"legal-notice","")}</div></footer>'
+ header=f'<header><a class="brand" href="{url(l)}"><img src="{img("KCAP_horizontal_color.svg")}" alt="KCAP — Business Gateway Platform" width="210" height="45"></a>{nav}{langs}</header>'
+ footer=f'<footer><a href="{url(l)}"><img src="{img("KCAP_horizontal_white.svg")}" alt="KCAP — Business Gateway Platform" width="150" height="32"></a><div class="footer-links">{link("privacy",l,"privacy","")}{link("legalNotice",l,"legal-notice","")}<span>KCAP Co., Ltd. · 867-87-03191</span></div></footer>'
  band=section('<h2>'+e(t('start',l))+'</h2>'+a(t('talk',l),url(l,'contact')+('#enquiry' if path=='contact' else ''),'action'),'contact-band')
  labels=[t('processHeading',l),t('directions',l),t('projects',l),t('news',l),t('contact',l)]
  heading_index=0

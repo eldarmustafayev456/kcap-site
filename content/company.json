@@ -1,0 +1,23 @@
+{
+  "name": "KCAP Co., Ltd.",
+  "name_ko": "주식회사 케이캡",
+  "business_registration": "867-87-03191",
+  "corporate_registration": "130111-1184637",
+  "contact_name": "In Sergey",
+  "phone": "+82-10-4414-4631",
+  "general_email": "info@koreacentralasia.com",
+  "project_email": "project@koreacentralasia.com",
+  "messengers": [
+    "WhatsApp",
+    "Telegram",
+    "WeChat",
+    "KakaoTalk"
+  ],
+  "address": {
+    "en": "D&C Bld., M38, Room 902, 42, Metapolice-Ro, Dongtan-Gu, Heaseong city, Gyonggi-Do, Republic of Korea",
+    "ru": "D&C Bld., M38, Room 902, 42, Metapolice-Ro, Dongtan-Gu, Heaseong city, Gyonggi-Do, Republic of Korea",
+    "ko": "경기도 화성시 동탄구 메타폴리스로 42, 9층 902호 엠38 (반송동, 디앤씨빌딩)"
+  },
+  "privacy_contact": "In Sergey",
+  "retention_months": 12
+}
