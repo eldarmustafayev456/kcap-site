@@ -8,6 +8,8 @@ function respond(int $status, string $code): void {
     echo json_encode(['ok' => $status === 202, 'code' => $code]);
     exit;
 }
+if (($_SERVER['HTTPS'] ?? '') !== 'on') respond(426, 'https_required');
+header('X-Content-Type-Options: nosniff');
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 if ($origin !== 'https://www.koreacentralasia.com') respond(403, 'origin');
 header('Access-Control-Allow-Origin: https://www.koreacentralasia.com');

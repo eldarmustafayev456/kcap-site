@@ -196,3 +196,5 @@ html,body{background:#FFFFFF}
 }
 /* Catalogue titles may wrap even when a hyphenation dictionary is unavailable. */
 #kcap .catalogue-list .project-title h3{overflow-wrap:anywhere;hyphens:auto;min-width:0}
+
+#kcap .spam-trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}#kcap .consent{display:flex;align-items:flex-start;gap:10px;margin:24px 0;font-size:14px;line-height:1.6}#kcap .consent input{width:18px;min-width:18px;height:18px;margin-top:4px}#kcap .consent .text-link{display:inline}

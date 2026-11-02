@@ -24,7 +24,9 @@ if(enquiry){
  let project=parameters.get('project')||'';
 
  enquiry.elements.project_id.value=project;if(project){enquiry.elements.topic.value='project';enquiry.elements.message.value=project+' — ';}
- enquiry.addEventListener('submit',event=>{
+ if(enquiry.dataset.endpoint){
+  attachKcapDirectEnquiry(enquiry,enquiry.dataset.endpoint,enquiry.dataset.consentVersion);
+ }else enquiry.addEventListener('submit',event=>{
   event.preventDefault();if(!enquiry.reportValidity())return;
   const data=new FormData(enquiry);const recipient=data.get('topic')==='project'?'project@koreacentralasia.com':'info@koreacentralasia.com';
   const subject='KCAP enquiry'+(project?' · '+project:'');
