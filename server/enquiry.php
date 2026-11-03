@@ -26,7 +26,12 @@ $configPath = realpath($configFile);
 if (!$rootPath || !$configPath || (strpos($configPath, rtrim($rootPath, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR) === 0)) respond(503, 'not_configured');
 $config = require $configFile; // This file must be outside the public document root.
 if (!is_array($config) || empty($config['enabled']) || empty($config['state_dir']) || empty($config['rate_key']) || empty($config['consent_version'])) respond(503, 'not_configured');
-if (!function_exists('mail')) respond(503, 'transport_unavailable');
+$smtp = $config['smtp'] ?? null;
+$passwordFile = dirname(__DIR__) . '/kcap-form-private/smtp-password.txt';
+if (is_array($smtp)) $smtp['password'] = is_file($passwordFile) && filesize($passwordFile) <= 4096 ? rtrim((string)file_get_contents($passwordFile), "\r\n") : '';
+$autoload = dirname(__DIR__) . '/kcap-form-private/vendor/autoload.php';
+if (!is_array($smtp) || ($smtp['host'] ?? '') !== 'mail.koreacentralasia.com' || ($smtp['port'] ?? 0) !== 465 || ($smtp['username'] ?? '') !== 'info@koreacentralasia.com' || !is_string($smtp['password'] ?? null) || $smtp['password'] === '' || !is_file($autoload)) respond(503, 'transport_unavailable');
+require_once $autoload;
 $raw = file_get_contents('php://input', false, null, 0, 40001);
 if ($raw === false || strlen($raw) > 40000) respond(413, 'size');
 try { $data = json_decode($raw, true, 32, JSON_THROW_ON_ERROR); }
@@ -68,7 +73,31 @@ $topic = $project !== '' ? 'project' : $data['topic'];
 $to = $topic === 'project' ? 'project@koreacentralasia.com' : 'info@koreacentralasia.com';
 $subject = 'KCAP website enquiry' . ($project !== '' ? ' - '.$project : '');
 $body = implode("\n", ['Language: '.$data['language'], 'Project: '.($project ?: '-'), 'Name: '.$data['name'], 'Organisation: '.$data['organisation'], 'Email: '.$data['email'], 'Consent version: '.$data['consent_version'], 'Received UTC: '.gmdate('c'), 'Retention: 12 months after the last substantive exchange', '', $data['message']]);
-$headers = ['From'=>'KCAP website <info@koreacentralasia.com>', 'Reply-To'=>$data['email'], 'MIME-Version'=>'1.0', 'Content-Type'=>'text/plain; charset=UTF-8', 'X-Mailer'=>'KCAP'];
+
 // Transport acceptance is not proof of inbox delivery. Verify both inboxes before activation.
-if (!mail($to, $subject, $body, $headers)) respond(503, 'delivery');
+try {
+    $mailer = new \PHPMailer\PHPMailer\PHPMailer(true);
+    $mailer->isSMTP();
+    $mailer->Host = $smtp['host'];
+    $mailer->Port = 465;
+    $mailer->SMTPAuth = true;
+    $mailer->Username = $smtp['username'];
+    $mailer->Password = $smtp['password'];
+    $mailer->SMTPSecure = \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS;
+    $mailer->SMTPAutoTLS = false;
+    $mailer->SMTPOptions = ['ssl' => ['verify_peer' => true, 'verify_peer_name' => true, 'allow_self_signed' => false]];
+    $mailer->Timeout = 12;
+    $mailer->Timelimit = 12;
+    $mailer->SMTPDebug = 0;
+    $mailer->CharSet = 'UTF-8';
+    $mailer->setFrom('info@koreacentralasia.com', 'KCAP website');
+    $mailer->addReplyTo($data['email']);
+    $mailer->addAddress($to);
+    $mailer->Subject = $subject;
+    $mailer->Body = $body;
+    if (!$mailer->send()) respond(503, 'delivery');
+} catch (\Throwable $error) {
+    // Never return SMTP diagnostics, credentials or message contents to the visitor.
+    respond(503, 'delivery');
+}
 respond(202, 'queued');
